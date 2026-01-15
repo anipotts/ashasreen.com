@@ -11,16 +11,16 @@ export const metadata: Metadata = {
 
 export default function ExperiencePage() {
   return (
-    <div className="min-h-screen bg-[var(--color-neutral-light)]">
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white dark:from-[#1F1F1F] to-[var(--color-neutral-light)]">
+    <div className="min-h-screen bg-[var(--color-neutral-light)] dark:bg-[#1A1A1A]">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white dark:from-[#1F1F1F] to-[var(--color-neutral-light)] dark:to-[#1A1A1A]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-[var(--color-primary)] font-medium mb-2 tracking-wide uppercase text-sm">
             Career Journey
           </p>
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-[var(--color-neutral-dark)] mb-6">
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-[var(--color-neutral-dark)] dark:text-white mb-6">
             Professional Experience
           </h1>
-          <p className="text-lg text-[var(--color-neutral-dark)]/70 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-[var(--color-neutral-dark)]/70 dark:text-white/70 max-w-2xl mx-auto leading-relaxed">
             My experience centers on supporting hiring teams, coordinating candidates, and maintaining reliable HR processes.
             I value clear communication, consistency, and creating calm, positive experiences for everyone involved.
           </p>
@@ -35,8 +35,8 @@ export default function ExperiencePage() {
             ))}
           </div>
 
-          <div className="mt-8 p-6 bg-[var(--color-primary)]/5 rounded-xl border border-[var(--color-primary)]/20">
-            <p className="text-sm text-[var(--color-neutral-dark)]/70 text-center">
+          <div className="mt-8 p-6 bg-[var(--color-primary)]/5 dark:bg-[#242424] rounded-xl border border-[var(--color-primary)]/20 dark:border-[var(--color-primary)]/30">
+            <p className="text-sm text-[var(--color-neutral-dark)]/70 dark:text-white/70 text-center">
               <span className="font-medium text-[var(--color-primary)]">Note:</span> These are placeholder entries.
               Full details will be added soon with specific achievements and metrics.
             </p>
@@ -46,12 +46,12 @@ export default function ExperiencePage() {
 
       <CoreCompetencies />
 
-      <section className="py-16 md:py-24 bg-[var(--color-neutral-dark)]">
+      <section className="py-16 md:py-24 bg-[var(--color-neutral-dark)] dark:bg-[#1F1F1F]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-2xl md:text-3xl font-bold text-[var(--color-neutral-light)] mb-4">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold text-[var(--color-neutral-light)] dark:text-white mb-4">
             Let&apos;s Connect
           </h2>
-          <p className="text-[var(--color-neutral-medium)] mb-8 max-w-xl mx-auto">
+          <p className="text-[var(--color-neutral-medium)] dark:text-gray-400 mb-8 max-w-xl mx-auto">
             For a complete overview of my professional background and experience,
             please visit my LinkedIn profile.
           </p>

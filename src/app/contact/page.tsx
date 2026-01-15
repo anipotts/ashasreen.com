@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 function ContactFormWrapper() {
   return (
-    <Suspense fallback={<div className="animate-pulse bg-[var(--color-neutral-medium)] h-96 rounded-xl" />}>
+    <Suspense fallback={<div className="animate-pulse bg-[var(--color-neutral-medium)] dark:bg-[#3D3D3D] h-96 rounded-xl" />}>
       <ContactForm />
     </Suspense>
   );
@@ -76,16 +76,16 @@ const SOCIAL_MEDIA_LINKS: ContactLink[] = [
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-[var(--color-neutral-light)]">
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white dark:from-[#1F1F1F] to-[var(--color-neutral-light)]">
+    <div className="min-h-screen bg-[var(--color-neutral-light)] dark:bg-[#1A1A1A]">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white dark:from-[#1F1F1F] to-[var(--color-neutral-light)] dark:to-[#1A1A1A]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-[var(--color-primary)] font-medium mb-2 tracking-wide uppercase text-sm">
             Get In Touch
           </p>
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-[var(--color-neutral-dark)] mb-6">
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-[var(--color-neutral-dark)] dark:text-white mb-6">
             Let&apos;s Connect
           </h1>
-          <p className="text-lg text-[var(--color-neutral-dark)]/70 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-[var(--color-neutral-dark)]/70 dark:text-white/70 max-w-2xl mx-auto leading-relaxed">
             Whether you&apos;re reaching out about a professional opportunity, have a question,
             or would like to connect, I&apos;d be happy to hear from you.
           </p>
@@ -96,14 +96,14 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
-              <div className="bg-white dark:bg-[#242424] rounded-2xl p-6 md:p-8 shadow-sm border border-[var(--color-neutral-medium)]">
+              <div className="bg-white dark:bg-[#242424] rounded-2xl p-6 md:p-8 shadow-sm border border-[var(--color-neutral-medium)] dark:border-[#3D3D3D]">
                 <ContactFormWrapper />
               </div>
             </div>
 
             <div className="space-y-6">
-              <div className="bg-white dark:bg-[#242424] rounded-2xl p-6 border border-[var(--color-neutral-medium)]">
-                <h3 className="font-serif text-lg font-semibold text-[var(--color-neutral-dark)] mb-4">
+              <div className="bg-white dark:bg-[#242424] rounded-2xl p-6 border border-[var(--color-neutral-medium)] dark:border-[#3D3D3D]">
+                <h3 className="font-serif text-lg font-semibold text-[var(--color-neutral-dark)] dark:text-white mb-4">
                   Direct Contact
                 </h3>
                 <div className="space-y-4">
@@ -113,13 +113,13 @@ export default function ContactPage() {
                       href={link.href}
                       target={link.isExternal ? '_blank' : undefined}
                       rel={link.isExternal ? 'noopener noreferrer' : undefined}
-                      className={`flex items-center gap-3 text-[var(--color-neutral-dark)]/80 ${link.hoverClass} transition-colors`}
+                      className={`flex items-center gap-3 text-[var(--color-neutral-dark)]/80 dark:text-white/80 ${link.hoverClass} transition-colors`}
                     >
                       <div className={`w-10 h-10 ${link.iconBgClass} rounded-lg flex items-center justify-center`}>
                         {link.icon}
                       </div>
                       <div>
-                        <p className="text-sm text-[var(--color-neutral-dark)]/50">{link.label}</p>
+                        <p className="text-sm text-[var(--color-neutral-dark)]/50 dark:text-white/50">{link.label}</p>
                         <p className="text-sm font-medium">{link.value}</p>
                       </div>
                     </a>
@@ -127,8 +127,8 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="bg-white dark:bg-[#242424] rounded-2xl p-6 border border-[var(--color-neutral-medium)]">
-                <h3 className="font-serif text-lg font-semibold text-[var(--color-neutral-dark)] mb-4">
+              <div className="bg-white dark:bg-[#242424] rounded-2xl p-6 border border-[var(--color-neutral-medium)] dark:border-[#3D3D3D]">
+                <h3 className="font-serif text-lg font-semibold text-[var(--color-neutral-dark)] dark:text-white mb-4">
                   Social Media
                 </h3>
                 <div className="space-y-4">
@@ -138,13 +138,13 @@ export default function ContactPage() {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`flex items-center gap-3 text-[var(--color-neutral-dark)]/80 ${link.hoverClass} transition-colors`}
+                      className={`flex items-center gap-3 text-[var(--color-neutral-dark)]/80 dark:text-white/80 ${link.hoverClass} transition-colors`}
                     >
                       <div className={`w-10 h-10 ${link.iconBgClass} rounded-lg flex items-center justify-center`}>
                         {link.icon}
                       </div>
                       <div>
-                        <p className="text-sm text-[var(--color-neutral-dark)]/50">{link.label}</p>
+                        <p className="text-sm text-[var(--color-neutral-dark)]/50 dark:text-white/50">{link.label}</p>
                         <p className="text-sm font-medium">{link.value}</p>
                       </div>
                     </a>
@@ -152,16 +152,16 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="bg-[var(--color-primary)]/5 rounded-2xl p-6 border border-[var(--color-primary)]/20">
+              <div className="bg-[var(--color-primary)]/5 dark:bg-[#242424] rounded-2xl p-6 border border-[var(--color-primary)]/20 dark:border-[var(--color-primary)]/30">
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 bg-[var(--color-primary)]/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Clock size={20} weight="duotone" className="text-[var(--color-primary)]" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-[var(--color-neutral-dark)] mb-1">
+                    <h4 className="font-medium text-[var(--color-neutral-dark)] dark:text-white mb-1">
                       Response Time
                     </h4>
-                    <p className="text-sm text-[var(--color-neutral-dark)]/70">
+                    <p className="text-sm text-[var(--color-neutral-dark)]/70 dark:text-white/70">
                       I typically respond to inquiries within 24-48 hours.
                     </p>
                   </div>

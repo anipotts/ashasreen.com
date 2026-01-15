@@ -59,10 +59,10 @@ export default function Overview() {
     <section className="py-16 md:py-24 bg-white dark:bg-[#1F1F1F]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-neutral-dark)] mb-4">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-neutral-dark)] dark:text-white mb-4">
             Professional Work, Guided by Care
           </h2>
-          <p className="text-[var(--color-neutral-dark)]/70 max-w-2xl mx-auto">
+          <p className="text-[var(--color-neutral-dark)]/70 dark:text-white/70 max-w-2xl mx-auto">
             Whether I&apos;m supporting hiring teams or preparing meals for a gathering, I approach my work with patience,
             intention, and responsibility. I believe good systems — and good people — make all the difference.
           </p>
@@ -72,23 +72,23 @@ export default function Overview() {
           {OVERVIEW_CARDS.map((card) => (
             <div
               key={card.title}
-              className={`group relative bg-[var(--color-neutral-light)] rounded-2xl p-8 border border-[var(--color-neutral-medium)] ${card.borderHoverClass} transition-all duration-300 hover:shadow-xl`}
+              className={`group relative bg-[var(--color-neutral-light)] dark:bg-[#242424] rounded-2xl p-8 border border-[var(--color-neutral-medium)] dark:border-[#3D3D3D] ${card.borderHoverClass} transition-all duration-300 hover:shadow-xl`}
             >
               <div className={`w-14 h-14 ${card.iconBgClass} rounded-xl flex items-center justify-center mb-6 ${card.iconHoverClass} transition-colors`}>
                 {card.icon}
               </div>
 
-              <h3 className="font-serif text-2xl font-semibold text-[var(--color-neutral-dark)] mb-4">
+              <h3 className="font-serif text-2xl font-semibold text-[var(--color-neutral-dark)] dark:text-white mb-4">
                 {card.title}
               </h3>
 
-              <p className="text-[var(--color-neutral-dark)]/70 mb-6 leading-relaxed">
+              <p className="text-[var(--color-neutral-dark)]/70 dark:text-white/70 mb-6 leading-relaxed">
                 {card.description}
               </p>
 
               <ul className="space-y-2 mb-8">
                 {card.features.map((feature) => (
-                  <li key={feature} className="flex items-center text-sm text-[var(--color-neutral-dark)]/80">
+                  <li key={feature} className="flex items-center text-sm text-[var(--color-neutral-dark)]/80 dark:text-white/80">
                     <Check size={16} weight="bold" className={`mr-2 ${card.featureIconClass}`} />
                     {feature}
                   </li>
@@ -107,7 +107,7 @@ export default function Overview() {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-[var(--color-neutral-dark)]/70 mb-6">
+          <p className="text-[var(--color-neutral-dark)]/70 dark:text-white/70 mb-6">
             Interested in working together or learning more?
           </p>
           <Link
