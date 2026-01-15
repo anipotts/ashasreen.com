@@ -117,7 +117,7 @@ export default function ContactForm() {
           required
           value={formData.name}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] bg-white focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors"
+          className="w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] bg-white dark:bg-[#1A1A1A] dark:text-white focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors"
           placeholder="John Doe"
         />
       </div>
@@ -134,7 +134,7 @@ export default function ContactForm() {
           required
           value={formData.email}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] bg-white focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors"
+          className="w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] bg-white dark:bg-[#1A1A1A] dark:text-white focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors"
           placeholder="john@example.com"
         />
       </div>
@@ -150,7 +150,7 @@ export default function ContactForm() {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] bg-white focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors"
+          className="w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] bg-white dark:bg-[#1A1A1A] dark:text-white focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors"
           placeholder="(555) 123-4567"
         />
       </div>
@@ -167,7 +167,7 @@ export default function ContactForm() {
           required
           value={formData.subject}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] bg-white focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors"
+          className="w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] bg-white dark:bg-[#1A1A1A] dark:text-white focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors"
           placeholder={
             formData.inquiryType === 'catering'
               ? 'e.g., Catering for Wedding Reception'
@@ -190,7 +190,7 @@ export default function ContactForm() {
           rows={5}
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] bg-white focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors resize-none"
+          className="w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] bg-white dark:bg-[#1A1A1A] dark:text-white focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors resize-none"
           placeholder={
             formData.inquiryType === 'catering'
               ? 'Please include event date, estimated guest count, and any dietary requirements...'
@@ -228,16 +228,16 @@ export default function ContactForm() {
 
       {/* Status Messages */}
       {submitStatus === 'success' && (
-        <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
-          <p className="text-green-800 text-sm font-medium">
+        <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+          <p className="text-green-800 dark:text-green-300 text-sm font-medium">
             Thank you for your message! I&apos;ll get back to you as soon as possible.
           </p>
         </div>
       )}
 
       {submitStatus === 'error' && (
-        <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-          <p className="text-red-800 text-sm font-medium">
+        <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+          <p className="text-red-800 dark:text-red-300 text-sm font-medium">
             Something went wrong. Please try again or email me directly at asreeniv3@gmail.com
           </p>
         </div>

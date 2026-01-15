@@ -90,7 +90,7 @@ export default function FoodGallery({ items }: FoodGalleryProps) {
           onClick={() => setSelectedItem(null)}
         >
           <div
-            className="relative bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-auto"
+            className="relative bg-white dark:bg-[#242424] rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}

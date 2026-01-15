@@ -11,7 +11,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="bg-white rounded-xl border border-[var(--color-neutral-medium)] hover:border-[var(--color-primary)] transition-all duration-300 overflow-hidden">
+    <div className="bg-white dark:bg-[#242424] rounded-xl border border-[var(--color-neutral-medium)] hover:border-[var(--color-primary)] transition-all duration-300 overflow-hidden">
       {/* Header - Always visible */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}

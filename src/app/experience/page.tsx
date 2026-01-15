@@ -11,7 +11,7 @@ export default function ExperiencePage() {
   return (
     <div className="min-h-screen bg-[var(--color-neutral-light)]">
       {/* Header Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[var(--color-neutral-light)]">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white dark:from-[#1F1F1F] to-[var(--color-neutral-light)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-[var(--color-primary)] font-medium mb-2 tracking-wide uppercase text-sm">
             Career Journey
@@ -46,7 +46,7 @@ export default function ExperiencePage() {
       </section>
 
       {/* Skills Summary */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white dark:bg-[#1F1F1F]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-serif text-2xl md:text-3xl font-bold text-[var(--color-neutral-dark)] mb-8 text-center">
             Core Competencies

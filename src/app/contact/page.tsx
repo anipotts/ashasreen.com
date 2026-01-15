@@ -20,7 +20,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-[var(--color-neutral-light)]">
       {/* Header Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[var(--color-neutral-light)]">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white dark:from-[#1F1F1F] to-[var(--color-neutral-light)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-[var(--color-primary)] font-medium mb-2 tracking-wide uppercase text-sm">
             Get In Touch
@@ -41,7 +41,7 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-[var(--color-neutral-medium)]">
+              <div className="bg-white dark:bg-[#242424] rounded-2xl p-6 md:p-8 shadow-sm border border-[var(--color-neutral-medium)]">
                 <ContactFormWrapper />
               </div>
             </div>
@@ -49,7 +49,7 @@ export default function ContactPage() {
             {/* Contact Info Sidebar */}
             <div className="space-y-6">
               {/* Direct Contact */}
-              <div className="bg-white rounded-2xl p-6 border border-[var(--color-neutral-medium)]">
+              <div className="bg-white dark:bg-[#242424] rounded-2xl p-6 border border-[var(--color-neutral-medium)]">
                 <h3 className="font-serif text-lg font-semibold text-[var(--color-neutral-dark)] mb-4">
                   Direct Contact
                 </h3>
@@ -90,7 +90,7 @@ export default function ContactPage() {
               </div>
 
               {/* Social Media */}
-              <div className="bg-white rounded-2xl p-6 border border-[var(--color-neutral-medium)]">
+              <div className="bg-white dark:bg-[#242424] rounded-2xl p-6 border border-[var(--color-neutral-medium)]">
                 <h3 className="font-serif text-lg font-semibold text-[var(--color-neutral-dark)] mb-4">
                   Social Media
                 </h3>
