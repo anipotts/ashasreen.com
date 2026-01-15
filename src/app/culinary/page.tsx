@@ -16,15 +16,14 @@ export default function CulinaryPage() {
       <section className="py-16 md:py-24 bg-gradient-to-b from-[var(--color-secondary)]/10 to-[var(--color-neutral-light)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-[var(--color-secondary)] font-medium mb-2 tracking-wide uppercase text-sm">
-            Asha&apos;s Culinary World
+            Personal Work
           </p>
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-[var(--color-neutral-dark)] mb-6">
-            South Indian Cuisine
+            Culinary Work
           </h1>
           <p className="text-lg text-[var(--color-neutral-dark)]/70 max-w-2xl mx-auto leading-relaxed">
-            Bringing authentic flavors and traditional recipes to your special occasions.
-            From intimate gatherings to large events, every dish is made with love and the
-            finest ingredients.
+            Cooking has always been a meaningful part of my life. I specialize in traditional South Indian dishes
+            prepared with intention and attention to detail — the same values that guide my professional work.
           </p>
         </div>
       </section>
@@ -42,7 +41,7 @@ export default function CulinaryPage() {
                 Signature Biryani
               </h3>
               <p className="text-sm text-[var(--color-neutral-dark)]/70">
-                Authentic Hyderabadi-style biryani with aromatic spices and premium ingredients
+                Traditional malabar biryani (chicken/mutton/shrimp) prepared with aromatic spices and high-quality ingredients.
               </p>
             </div>
 
@@ -52,10 +51,10 @@ export default function CulinaryPage() {
                 <span className="text-3xl">👥</span>
               </div>
               <h3 className="font-serif text-lg font-semibold text-[var(--color-neutral-dark)] mb-2">
-                Large-Scale Catering
+                Home Catering for Hundreds
               </h3>
               <p className="text-sm text-[var(--color-neutral-dark)]/70">
-                Serving 50-100+ guests with the same care and quality as a home-cooked meal
+                Experience preparing food for gatherings of 50–100+ guests while maintaining consistency and extremely high quality.
               </p>
             </div>
 
@@ -68,7 +67,7 @@ export default function CulinaryPage() {
                 Efficient Preparation
               </h3>
               <p className="text-sm text-[var(--color-neutral-dark)]/70">
-                Years of experience delivering large quantities quickly without compromising quality
+                Careful planning and preparation to deliver large quantities without compromising taste or freshness.
               </p>
             </div>
           </div>
@@ -83,7 +82,7 @@ export default function CulinaryPage() {
               From My Kitchen
             </h2>
             <p className="text-[var(--color-neutral-dark)]/70 max-w-xl mx-auto">
-              A showcase of dishes prepared for various events and occasions.
+              A small selection of dishes prepared for family gatherings, community events, and special occasions.
             </p>
           </div>
 
@@ -92,8 +91,7 @@ export default function CulinaryPage() {
           {/* Placeholder notice */}
           <div className="mt-8 p-6 bg-[var(--color-secondary)]/5 rounded-xl border border-[var(--color-secondary)]/20 text-center">
             <p className="text-sm text-[var(--color-neutral-dark)]/70">
-              <span className="font-medium text-[var(--color-secondary)]">Note:</span> These are placeholder images.
-              Actual food photography will be added soon!
+              <span className="font-medium text-[var(--color-secondary)]">Note:</span> Photos coming soon
             </p>
           </div>
         </div>
@@ -109,8 +107,8 @@ export default function CulinaryPage() {
             Planning an Event?
           </h2>
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
-            Whether it&apos;s a family celebration, corporate event, or community gathering,
-            let me bring the flavors of South India to your table.
+            If you&apos;re planning a family celebration or community gathering,
+            I&apos;d be happy to discuss how I can help.
           </p>
           <Link
             href="/contact?type=catering"

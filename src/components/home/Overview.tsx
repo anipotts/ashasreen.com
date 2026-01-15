@@ -7,11 +7,11 @@ export default function Overview() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-neutral-dark)] mb-4">
-            Two Passions, One Purpose
+            Professional Work, Guided by Care
           </h2>
           <p className="text-[var(--color-neutral-dark)]/70 max-w-2xl mx-auto">
-            Whether I&apos;m helping companies find their perfect candidates or creating
-            memorable meals for special occasions, I bring the same dedication and care to everything I do.
+            Whether I&apos;m supporting hiring teams or preparing meals for a gathering, I approach my work with patience,
+            intention, and responsibility. I believe good systems — and good people — make all the difference.
           </p>
         </div>
 
@@ -27,13 +27,13 @@ export default function Overview() {
             </div>
 
             <h3 className="font-serif text-2xl font-semibold text-[var(--color-neutral-dark)] mb-4">
-              HR & People Science
+              HR & People Operations
             </h3>
 
             <p className="text-[var(--color-neutral-dark)]/70 mb-6 leading-relaxed">
-              Experienced in creating seamless candidate experiences, managing recruitment processes,
-              and supporting HR operations. I believe every interaction with a candidate should reflect
-              a company&apos;s values and culture.
+              I support recruiters and managers by handling the details that keep hiring and onboarding running smoothly.
+              From scheduling interviews to maintaining accurate records, I take pride in being dependable, organized,
+              and thoughtful in every interaction.
             </p>
 
             <ul className="space-y-2 mb-8">
@@ -41,19 +41,19 @@ export default function Overview() {
                 <svg className="w-4 h-4 mr-2 text-[var(--color-primary)]" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                Candidate Experience Management
+                Candidate & Employee Support
               </li>
               <li className="flex items-center text-sm text-[var(--color-neutral-dark)]/80">
                 <svg className="w-4 h-4 mr-2 text-[var(--color-primary)]" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                ATS & HR Systems
+                Interview Scheduling & Coordination
               </li>
               <li className="flex items-center text-sm text-[var(--color-neutral-dark)]/80">
                 <svg className="w-4 h-4 mr-2 text-[var(--color-primary)]" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                Interview Coordination
+                ATS & HR Documentation
               </li>
             </ul>
 
@@ -78,13 +78,13 @@ export default function Overview() {
             </div>
 
             <h3 className="font-serif text-2xl font-semibold text-[var(--color-neutral-dark)] mb-4">
-              Culinary Arts
+              Culinary Work
             </h3>
 
             <p className="text-[var(--color-neutral-dark)]/70 mb-6 leading-relaxed">
-              Bringing authentic South Indian flavors to gatherings of all sizes. Specializing in
-              biryani and traditional dishes, I cater events serving 50-100+ guests with the same
-              love and attention as a home-cooked meal.
+              Outside of my professional work, I run a home-based culinary project focused on traditional South Indian cuisine.
+              Cooking has always been my way of bringing people together, and it reflects the same care and patience I bring
+              to my professional life.
             </p>
 
             <ul className="space-y-2 mb-8">
@@ -92,19 +92,19 @@ export default function Overview() {
                 <svg className="w-4 h-4 mr-2 text-[var(--color-secondary)]" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                Large-Scale Catering (50-100+ guests)
+                Large-Scale Home Catering
               </li>
               <li className="flex items-center text-sm text-[var(--color-neutral-dark)]/80">
                 <svg className="w-4 h-4 mr-2 text-[var(--color-secondary)]" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                Authentic South Indian Recipes
+                Traditional South Indian Recipes
               </li>
               <li className="flex items-center text-sm text-[var(--color-neutral-dark)]/80">
                 <svg className="w-4 h-4 mr-2 text-[var(--color-secondary)]" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                Signature Biryani Specialist
+                Signature Biryani
               </li>
             </ul>
 
@@ -112,7 +112,7 @@ export default function Overview() {
               href="/culinary"
               className="inline-flex items-center text-[var(--color-secondary)] font-medium hover:text-[var(--color-secondary-dark)] transition-colors"
             >
-              Explore My Cuisine
+              Explore My Culinary Work
               <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -123,7 +123,7 @@ export default function Overview() {
         {/* CTA Section */}
         <div className="mt-16 text-center">
           <p className="text-[var(--color-neutral-dark)]/70 mb-6">
-            Interested in working together or have a catering inquiry?
+            Interested in working together or learning more?
           </p>
           <Link
             href="/contact"

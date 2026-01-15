@@ -2,8 +2,8 @@
 
 :root {
   /* Warm & Professional Color Palette - Light Mode */
-  --color-primary: #D4A853;        /* Warm gold/amber */
-  --color-primary-dark: #B8923A;   /* Darker gold for hover states */
+  --color-primary: #f26959;        /* Coral */
+  --color-primary-dark: #d9574a;   /* Darker coral for hover states */
   --color-secondary: #C65D3B;      /* Deep terracotta */
   --color-secondary-dark: #A34D30; /* Darker terracotta */
   --color-accent: #7D8471;         /* Sage green */

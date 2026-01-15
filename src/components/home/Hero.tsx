@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -15,13 +15,19 @@ export default function Hero() {
               Welcome
             </p>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--color-neutral-dark)] leading-tight mb-6">
-              Hi, I&apos;m{' '}
+              Hi, I&apos;m{" "}
               <span className="text-[var(--color-primary)]">Asha</span>
             </h1>
             <p className="text-lg md:text-xl text-[var(--color-neutral-dark)]/80 leading-relaxed mb-8">
-              HR & People Science professional with a passion for creating exceptional candidate experiences.
-              When I&apos;m not connecting talent with opportunity, I&apos;m crafting authentic South Indian cuisine
-              for gatherings of all sizes.
+              I&apos;m an HR professional with a strong focus on candidate
+              experience, coordination, and people operations. I bring care,
+              organization, and follow-through to every role I support.
+            </p>
+            <p className="text-lg md:text-xl text-[var(--color-neutral-dark)]/80 leading-relaxed mb-8">
+              I&apos;m currently seeking a remote, part-time or full-time
+              opportunity where I can help teams run smoothly and ensure
+              candidates and employees feel supported throughout every step of
+              the process.
             </p>
 
             {/* CTA Buttons */}
@@ -31,15 +37,25 @@ export default function Hero() {
                 className="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-primary)] text-white font-medium rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors shadow-lg shadow-[var(--color-primary)]/25"
               >
                 View My Experience
-                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <svg
+                  className="ml-2 w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
                 </svg>
               </Link>
               <Link
                 href="/culinary"
                 className="inline-flex items-center justify-center px-6 py-3 border-2 border-[var(--color-secondary)] text-[var(--color-secondary)] font-medium rounded-lg hover:bg-[var(--color-secondary)] hover:text-white transition-colors"
               >
-                Explore My Cuisine
+                Explore My Culinary Work
               </Link>
             </div>
           </div>
@@ -54,7 +70,7 @@ export default function Hero() {
               {/* Photo container */}
               <div className="relative w-64 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
                 <Image
-                  src="/images/headshot.png"
+                  src="/images/headshot-coral.jpeg"
                   alt="Asha Sreenivasan"
                   fill
                   className="object-cover"
