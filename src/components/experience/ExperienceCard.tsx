@@ -1,35 +1,49 @@
 'use client';
 
 import { useState } from 'react';
+import { CaretDown, Check } from '@phosphor-icons/react';
 import type { Experience } from '@/lib/data';
 
 interface ExperienceCardProps {
   experience: Experience;
 }
 
+function getWorkTypeBadgeClass(type: Experience['type']): string {
+  const baseClass = 'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium';
+  switch (type) {
+    case 'remote':
+      return `${baseClass} bg-[var(--color-accent)]/10 text-[var(--color-accent)]`;
+    case 'hybrid':
+      return `${baseClass} bg-[var(--color-primary)]/10 text-[var(--color-primary)]`;
+    case 'onsite':
+      return `${baseClass} bg-[var(--color-secondary)]/10 text-[var(--color-secondary)]`;
+  }
+}
+
+function capitalizeFirst(str: string): string {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 export default function ExperienceCard({ experience }: ExperienceCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
+  function toggleExpanded(): void {
+    setIsExpanded((prev) => !prev);
+  }
+
   return (
     <div className="bg-white dark:bg-[#242424] rounded-xl border border-[var(--color-neutral-medium)] hover:border-[var(--color-primary)] transition-all duration-300 overflow-hidden">
-      {/* Header - Always visible */}
       <button
-        onClick={() => setIsExpanded(!isExpanded)}
+        onClick={toggleExpanded}
         className="w-full p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:ring-inset"
         aria-expanded={isExpanded}
+        type="button"
       >
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div className="flex-grow">
             <div className="flex items-center gap-2 mb-2">
-              {/* Work type badge */}
-              <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                experience.type === 'remote'
-                  ? 'bg-[var(--color-accent)]/10 text-[var(--color-accent)]'
-                  : experience.type === 'hybrid'
-                  ? 'bg-[var(--color-primary)]/10 text-[var(--color-primary)]'
-                  : 'bg-[var(--color-secondary)]/10 text-[var(--color-secondary)]'
-              }`}>
-                {experience.type.charAt(0).toUpperCase() + experience.type.slice(1)}
+              <span className={getWorkTypeBadgeClass(experience.type)}>
+                {capitalizeFirst(experience.type)}
               </span>
             </div>
 
@@ -51,17 +65,13 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
               </p>
             </div>
 
-            {/* Expand/Collapse icon */}
             <div className={`p-2 rounded-full bg-[var(--color-neutral-light)] transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}>
-              <svg className="w-5 h-5 text-[var(--color-neutral-dark)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
+              <CaretDown size={20} weight="bold" className="text-[var(--color-neutral-dark)]" />
             </div>
           </div>
         </div>
       </button>
 
-      {/* Expandable Content */}
       <div
         className={`overflow-hidden transition-all duration-300 ease-in-out ${
           isExpanded ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
@@ -69,27 +79,22 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
       >
         <div className="px-6 pb-6 border-t border-[var(--color-neutral-medium)]">
           <div className="pt-6">
-            {/* Description */}
             <p className="text-[var(--color-neutral-dark)]/80 leading-relaxed mb-6">
               {experience.description}
             </p>
 
-            {/* Highlights */}
             <div className="mb-6">
               <h4 className="font-semibold text-[var(--color-neutral-dark)] mb-3">Key Highlights</h4>
               <ul className="space-y-2">
                 {experience.highlights.map((highlight, index) => (
                   <li key={index} className="flex items-start">
-                    <svg className="w-5 h-5 mr-2 text-[var(--color-primary)] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
+                    <Check size={20} weight="bold" className="mr-2 text-[var(--color-primary)] flex-shrink-0 mt-0.5" />
                     <span className="text-[var(--color-neutral-dark)]/80">{highlight}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Skills */}
             <div>
               <h4 className="font-semibold text-[var(--color-neutral-dark)] mb-3">Skills & Technologies</h4>
               <div className="flex flex-wrap gap-2">

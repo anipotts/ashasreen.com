@@ -1,4 +1,7 @@
-// Experience data structure
+// ============================================================================
+// Type Definitions
+// ============================================================================
+
 export interface Experience {
   id: string;
   company: string;
@@ -12,6 +15,40 @@ export interface Experience {
   skills: string[];
 }
 
+export interface FoodItem {
+  id: string;
+  title: string;
+  description: string;
+  imagePath: string;
+  category: 'biryani' | 'curry' | 'appetizer' | 'dessert' | 'other';
+}
+
+export interface Testimonial {
+  id: string;
+  name: string;
+  comment: string;
+  platform: 'instagram' | 'facebook' | 'youtube';
+  date?: string;
+}
+
+export interface SocialLinks {
+  linkedin: string;
+  youtube: string;
+  instagram: string;
+  email: string;
+}
+
+export interface SiteConfig {
+  name: string;
+  title: string;
+  description: string;
+  url: string;
+}
+
+// ============================================================================
+// Experience Data
+// ============================================================================
+
 export const experiences: Experience[] = [
   {
     id: '1',
@@ -21,26 +58,27 @@ export const experiences: Experience[] = [
     type: 'remote',
     startDate: 'Month Year',
     endDate: 'January 2026',
-    description: 'Supported the full candidate lifecycle with a focus on clear communication and organization. Coordinated interviews, managed candidate correspondence, and maintained accurate ATS records. Served as a reliable point of contact for both candidates and internal teams.',
+    description:
+      'Supported the full candidate lifecycle with a focus on clear communication and organization. Coordinated interviews, managed candidate correspondence, and maintained accurate ATS records. Served as a reliable point of contact for both candidates and internal teams.',
     highlights: [
       'Supported recruiters by managing scheduling and candidate communication across multiple roles',
       'Maintained organized and up-to-date ATS records with strong attention to detail',
       'Helped create a smooth, respectful experience for candidates throughout the hiring process',
     ],
-    skills: ['Candidate Experience', 'ATS Management', 'Interview Coordination', 'HR Operations', 'Communication'],
+    skills: [
+      'Candidate Experience',
+      'ATS Management',
+      'Interview Coordination',
+      'HR Operations',
+      'Communication',
+    ],
   },
 ];
 
-// Food gallery item structure
-export interface FoodItem {
-  id: string;
-  title: string;
-  description: string;
-  imagePath: string;
-  category: 'biryani' | 'curry' | 'appetizer' | 'dessert' | 'other';
-}
+// ============================================================================
+// Food Gallery Data
+// ============================================================================
 
-// Placeholder food items - to be replaced with real images
 export const foodItems: FoodItem[] = [
   {
     id: '1',
@@ -86,18 +124,55 @@ export const foodItems: FoodItem[] = [
   },
 ];
 
-// Social media links
-export const socialLinks = {
+// ============================================================================
+// Testimonials Data
+// ============================================================================
+
+export const testimonials: Testimonial[] = [
+  {
+    id: '1',
+    name: 'Sarah M.',
+    comment: "The biryani was absolutely amazing! Best I've ever had outside of India.",
+    platform: 'instagram',
+    date: '2024-12-15',
+  },
+  {
+    id: '2',
+    name: 'Raj P.',
+    comment:
+      "Asha catered our wedding and everyone couldn't stop talking about the food. Authentic and delicious!",
+    platform: 'facebook',
+    date: '2024-11-20',
+  },
+  {
+    id: '3',
+    name: 'Jennifer L.',
+    comment:
+      'Your cooking videos are so helpful! Made your biryani recipe last night and my family loved it.',
+    platform: 'youtube',
+    date: '2025-01-10',
+  },
+];
+
+// ============================================================================
+// Social Links
+// ============================================================================
+
+export const socialLinks: SocialLinks = {
   linkedin: 'https://www.linkedin.com/in/asha-sreenivasan-1a810114b/',
   youtube: 'https://www.youtube.com/@ashasculinaryworld',
   instagram: 'https://www.instagram.com/ashasculinaryworld/',
   email: 'asreeniv3@gmail.com',
 };
 
-// Site metadata
-export const siteConfig = {
+// ============================================================================
+// Site Configuration
+// ============================================================================
+
+export const siteConfig: SiteConfig = {
   name: 'Asha Sreenivasan',
   title: 'Asha Sreenivasan | HR Professional & Culinary Artist',
-  description: 'HR/People Science professional with expertise in candidate experience, and South Indian culinary artist specializing in large-scale catering.',
+  description:
+    'HR/People Science professional with expertise in candidate experience, and South Indian culinary artist specializing in large-scale catering.',
   url: 'https://ashasreen.com',
 };
