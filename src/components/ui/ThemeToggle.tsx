@@ -1,33 +1,17 @@
 'use client';
 
-import { useSyncExternalStore, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { Sun, Moon } from '@phosphor-icons/react';
 
 type Theme = 'light' | 'dark';
 
-function getThemeSnapshot(): Theme {
+function getInitialTheme(): Theme {
   if (typeof window === 'undefined') {
     return 'light';
   }
   const savedTheme = localStorage.getItem('theme') as Theme | null;
-  if (savedTheme) {
-    return savedTheme;
-  }
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-}
-
-function getServerSnapshot(): Theme {
-  return 'light';
-}
-
-function subscribe(callback: () => void): () => void {
-  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-  mediaQuery.addEventListener('change', callback);
-  window.addEventListener('storage', callback);
-  return () => {
-    mediaQuery.removeEventListener('change', callback);
-    window.removeEventListener('storage', callback);
-  };
+  // Default to light mode - only use saved theme if it exists
+  return savedTheme || 'light';
 }
 
 function applyThemeToDOM(newTheme: Theme): void {
@@ -39,20 +23,35 @@ function applyThemeToDOM(newTheme: Theme): void {
 }
 
 export default function ThemeToggle() {
-  const theme = useSyncExternalStore(subscribe, getThemeSnapshot, getServerSnapshot);
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+  const [mounted, setMounted] = useState(false);
 
-  // Apply theme to DOM when it changes
-  if (typeof window !== 'undefined') {
+  // Apply theme on mount and whenever it changes
+  useEffect(() => {
+    setMounted(true);
     applyThemeToDOM(theme);
-  }
+  }, [theme]);
 
-  const toggleTheme = useCallback((): void => {
+  const toggleTheme = (): void => {
     const newTheme: Theme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
     applyThemeToDOM(newTheme);
-    // Trigger storage event to update the store
-    window.dispatchEvent(new StorageEvent('storage'));
-  }, [theme]);
+  };
+
+  // Prevent hydration mismatch by not rendering until mounted
+  if (!mounted) {
+    return (
+      <button
+        className="p-2 rounded-lg hover:bg-[var(--color-neutral-medium)] transition-colors"
+        aria-label="Toggle theme"
+        type="button"
+        disabled
+      >
+        <Moon size={20} weight="duotone" className="text-[var(--color-primary)]" />
+      </button>
+    );
+  }
 
   return (
     <button
