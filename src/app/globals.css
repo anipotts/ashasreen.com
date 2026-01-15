@@ -1,27 +1,56 @@
 @import "tailwindcss";
 
-:root {
-  /* Warm & Professional Color Palette - Light Mode */
-  --color-primary: #f26959;        /* Coral */
-  --color-primary-dark: #d9574a;   /* Darker coral for hover states */
-  --color-secondary: #C65D3B;      /* Deep terracotta */
-  --color-secondary-dark: #A34D30; /* Darker terracotta */
-  --color-accent: #7D8471;         /* Sage green */
-  --color-neutral-dark: #2D2D2D;   /* Charcoal */
-  --color-neutral-light: #FAF7F2;  /* Warm white */
-  --color-neutral-medium: #E8E4DD; /* Warm gray */
+/* ============================================================================
+   Color Variables - Light Mode (Default)
+   ============================================================================ */
 
+:root {
+  /* Primary Colors */
+  --color-primary: #f26959;
+  --color-primary-dark: #d9574a;
+  --color-secondary: #C65D3B;
+  --color-secondary-dark: #A34D30;
+  --color-accent: #7D8471;
+
+  /* Neutral Colors */
+  --color-neutral-dark: #2D2D2D;
+  --color-neutral-light: #FAF7F2;
+  --color-neutral-medium: #E8E4DD;
+
+  /* Background & Foreground */
   --background: #FAF7F2;
   --foreground: #2D2D2D;
-
-  /* Dark mode specific overrides */
-  --dark-bg: #1A1A1A;
-  --dark-bg-secondary: #242424;
-  --dark-bg-tertiary: #2D2D2D;
-  --dark-text: #F5F5F5;
-  --dark-text-muted: #A0A0A0;
-  --dark-border: #3D3D3D;
 }
+
+/* ============================================================================
+   Color Variables - Dark Mode (Manual Toggle)
+   ============================================================================ */
+
+.dark {
+  --background: #1A1A1A;
+  --foreground: #F5F5F5;
+  --color-neutral-light: #242424;
+  --color-neutral-medium: #3D3D3D;
+  --color-neutral-dark: #F5F5F5;
+}
+
+/* ============================================================================
+   Color Variables - Dark Mode (System Preference Fallback)
+   ============================================================================ */
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --background: #1A1A1A;
+    --foreground: #F5F5F5;
+    --color-neutral-light: #242424;
+    --color-neutral-medium: #3D3D3D;
+    --color-neutral-dark: #F5F5F5;
+  }
+}
+
+/* ============================================================================
+   Tailwind Theme Configuration
+   ============================================================================ */
 
 @theme inline {
   --color-background: var(--background);
@@ -36,24 +65,12 @@
   --color-neutral-medium: var(--color-neutral-medium);
 }
 
-/* Dark mode color scheme */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1A1A1A;
-    --foreground: #F5F5F5;
-    --color-neutral-light: #242424;
-    --color-neutral-medium: #3D3D3D;
-    --color-neutral-dark: #F5F5F5;
-  }
-}
+/* ============================================================================
+   Base Styles
+   ============================================================================ */
 
-/* Manual dark mode class support */
-.dark {
-  --background: #1A1A1A;
-  --foreground: #F5F5F5;
-  --color-neutral-light: #242424;
-  --color-neutral-medium: #3D3D3D;
-  --color-neutral-dark: #F5F5F5;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -63,12 +80,10 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
+/* ============================================================================
+   Scrollbar Styles
+   ============================================================================ */
 
-/* Custom scrollbar - Light */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -86,29 +101,22 @@ html {
   background: var(--color-primary-dark);
 }
 
-/* Dark mode scrollbar */
-@media (prefers-color-scheme: dark) {
-  ::-webkit-scrollbar-track {
-    background: #1A1A1A;
-  }
-}
+/* ============================================================================
+   Focus Styles (Accessibility)
+   ============================================================================ */
 
-/* Focus styles for accessibility */
 *:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
-/* Image placeholder styling */
+/* ============================================================================
+   Image Placeholder Styles
+   ============================================================================ */
+
 .image-placeholder {
   background: linear-gradient(135deg, var(--color-neutral-medium) 0%, var(--color-neutral-light) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@media (prefers-color-scheme: dark) {
-  .image-placeholder {
-    background: linear-gradient(135deg, #2D2D2D 0%, #242424 100%);
-  }
 }

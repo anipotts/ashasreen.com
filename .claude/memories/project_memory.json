@@ -3,36 +3,48 @@
   "manual_memories": [],
   "realtime_memories": [
     {
+      "type": "project_context",
+      "content": "Building portfolio website for Asha Sreenivasan who was recently laid off from HR Assistant/Candidate Experience Specialist role at People Science (remote). Site serves dual purpose: showcase HR/People Operations experience for job search + display South Indian culinary catering business (biryani specialty for 50-100+ guests). Domain: ashasreen.com. Contact: asreeniv3@gmail.com",
+      "added_at": "2026-01-15T14:15:00.000000",
+      "source": "consolidated"
+    },
+    {
+      "type": "tech_stack",
+      "content": "Next.js 14+ App Router, TypeScript, Tailwind CSS, Vercel hosting. Uses @phosphor-icons/react for all icons (duotone weight). Dark mode via CSS custom properties + localStorage. Google Fonts: Playfair Display (headings) + Inter (body).",
+      "added_at": "2026-01-15T14:15:00.000000",
+      "source": "consolidated"
+    },
+    {
+      "type": "design_preferences",
+      "content": "Primary color: coral #f26959 (NOT gold). Warm & professional aesthetic. Mobile-first responsive design. Full dark mode support with theme toggle in header. NEVER use emojis - always use Phosphor icons with duotone weight instead. Never use React Icons or Lucide icons.",
+      "added_at": "2026-01-15T14:15:00.000000",
+      "source": "consolidated"
+    },
+    {
+      "type": "content_strategy",
+      "content": "Humble, professional job-seeking tone throughout. Emphasize care, organization, follow-through. HR content focuses on candidate experience, coordination, people operations. Culinary content emphasizes traditional South Indian cuisine prepared with intention and attention to detail. Headshot image: /images/headshot-coral.jpeg",
+      "added_at": "2026-01-15T14:15:00.000000",
+      "source": "consolidated"
+    },
+    {
+      "type": "social_media",
+      "content": "YouTube: @ashasculinaryworld (~4,500 subscribers, 1M+ total views). Instagram: @ashasculinaryworld (~1,000 followers). LinkedIn: https://www.linkedin.com/in/asha-sreenivasan-1a810114b/. Testimonials component on culinary page displays social media comments with platform icons.",
+      "added_at": "2026-01-15T14:15:00.000000",
+      "source": "consolidated"
+    },
+    {
+      "type": "completed_features",
+      "content": "Dark mode toggle (fixed: removes 'dark' class when light mode), testimonials carousel with auto-rotation, Phosphor icons replacing all emojis (CoreCompetencies + SpecialtiesSection components), coral theme applied globally, contact form with inquiry type selector (job/catering/general), TESTIMONIALS_GUIDE.md for collecting social media testimonials.",
+      "added_at": "2026-01-15T14:15:00.000000",
+      "source": "consolidated"
+    },
+    {
       "type": "message",
-      "content": "My mother just got laid off from her job as an HR Assistant or Candidate Experience Specialist for People Science and she was working there remotely. I want to help her as much as possible. She's taki",
-      "added_at": "2026-01-15T11:44:35.621181",
-      "source": "realtime_capture"
-    },
-    {
-      "type": "claude_response",
-      "content": "---\n\n## Portfolio Website Complete!\n\nI've built a full scaffold of your mom's portfolio website. Here's what's ready:\n\n### What's Built\n\n| Page | Features |\n|------|----------|\n| **Home** | Hero with ",
-      "added_at": "2026-01-15T12:06:05.740253",
-      "source": "realtime_capture"
-    },
-    {
-      "type": "message",
-      "content": "I've added a simple @headshot.png image into the public images folder. Replace the image shown in the hero of the landing to use this. Also add light mode, dark mode responsiveness to the entire websi",
-      "added_at": "2026-01-15T12:06:05.740274",
-      "source": "realtime_capture"
-    },
-    {
-      "type": "claude_response",
-      "content": "---\n\n## Summary\n\nAll tasks complete:\n\n1. **Headshot image** - Now displayed in the Hero section using `/images/headshot.png`\n\n2. **Dark mode** - Full support added via CSS variables that respond to `p",
-      "added_at": "2026-01-15T13:44:17.447535",
-      "source": "realtime_capture"
-    },
-    {
-      "type": "message",
-      "content": "update the theme color used throughout the site to be this coral color instead of that yellow/gold: #f26959. and also, update the text with this # NAVIGATION **Brand / Logo** * **Asha Sreenivasan** **",
-      "added_at": "2026-01-15T13:44:17.447612",
+      "content": "use your code cleanup agent to do a comprehensive analysis on all code in this codeabse for a portfolio website for my mom, can you clean this up even more and ensure this is extremely organized and a",
+      "added_at": "2026-01-15T14:32:27.959799",
       "source": "realtime_capture"
     }
   ],
   "created_at": "2026-01-15T11:44:35.621136",
-  "updated_at": "2026-01-15T13:44:17.447614"
+  "updated_at": "2026-01-15T14:32:27.959806"
 }

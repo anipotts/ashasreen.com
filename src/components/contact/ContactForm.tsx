@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { CircleNotch } from '@phosphor-icons/react';
 
 type InquiryType = 'job' | 'catering' | 'general';
 
@@ -14,7 +15,9 @@ interface FormData {
   message: string;
 }
 
-const initialFormData: FormData = {
+type SubmitStatus = 'idle' | 'success' | 'error';
+
+const INITIAL_FORM_DATA: FormData = {
   name: '',
   email: '',
   phone: '',
@@ -23,89 +26,128 @@ const initialFormData: FormData = {
   message: '',
 };
 
+const INQUIRY_TYPE_LABELS: Record<InquiryType, string> = {
+  job: 'Job Opportunity',
+  catering: 'Catering Request',
+  general: 'General Inquiry',
+};
+
+const INQUIRY_TYPES: InquiryType[] = ['job', 'catering', 'general'];
+
+function getButtonColorClass(type: InquiryType, isSelected: boolean): string {
+  if (!isSelected) {
+    return 'bg-[var(--color-neutral-light)] text-[var(--color-neutral-dark)] hover:bg-[var(--color-neutral-medium)]';
+  }
+
+  switch (type) {
+    case 'job':
+      return 'bg-[var(--color-primary)] text-white';
+    case 'catering':
+      return 'bg-[var(--color-secondary)] text-white';
+    case 'general':
+      return 'bg-[var(--color-accent)] text-white';
+  }
+}
+
+function getSubjectPlaceholder(inquiryType: InquiryType): string {
+  switch (inquiryType) {
+    case 'catering':
+      return 'e.g., Catering for Wedding Reception';
+    case 'job':
+      return 'Remote HR or People Operations Opportunity';
+    case 'general':
+      return 'How can I help?';
+  }
+}
+
+function getMessagePlaceholder(inquiryType: InquiryType): string {
+  switch (inquiryType) {
+    case 'catering':
+      return 'Please include event date, estimated guest count, and any dietary requirements...';
+    case 'job':
+      return 'Please share details about the role and team.';
+    case 'general':
+      return 'Your message...';
+  }
+}
+
+function getSubmitButtonClass(inquiryType: InquiryType, isSubmitting: boolean): string {
+  if (isSubmitting) {
+    return 'bg-[var(--color-neutral-medium)] text-[var(--color-neutral-dark)]/50 cursor-not-allowed';
+  }
+
+  if (inquiryType === 'catering') {
+    return 'bg-[var(--color-secondary)] text-white hover:bg-[var(--color-secondary-dark)]';
+  }
+
+  return 'bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-dark)]';
+}
+
 export default function ContactForm() {
   const searchParams = useSearchParams();
-  const [formData, setFormData] = useState<FormData>(initialFormData);
+  const [formData, setFormData] = useState<FormData>(INITIAL_FORM_DATA);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<SubmitStatus>('idle');
 
-  // Set inquiry type from URL params
   useEffect(() => {
     const type = searchParams.get('type');
     if (type === 'catering' || type === 'job' || type === 'general') {
-      setFormData(prev => ({ ...prev, inquiryType: type }));
+      setFormData((prev) => ({ ...prev, inquiryType: type }));
     }
   }, [searchParams]);
 
-  const handleChange = (
+  function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
+  ): void {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  function handleInquiryTypeChange(type: InquiryType): void {
+    setFormData((prev) => ({ ...prev, inquiryType: type }));
+  }
+
+  async function handleSubmit(e: React.FormEvent): Promise<void> {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
     try {
-      // For now, we'll simulate form submission
-      // In production, this would connect to a server action or API route
-      await new Promise(resolve => setTimeout(resolve, 1500));
-
-      // TODO: Replace with actual form submission
-      // Options:
-      // 1. Vercel serverless function to send email
-      // 2. Formspree integration
-      // 3. SendGrid/Resend API
-
+      // Simulate form submission - replace with actual API call
+      await new Promise((resolve) => setTimeout(resolve, 1500));
       console.log('Form submitted:', formData);
       setSubmitStatus('success');
-      setFormData(initialFormData);
+      setFormData(INITIAL_FORM_DATA);
     } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
-  };
+  }
 
-  const inquiryTypeLabels = {
-    job: 'Job Opportunity',
-    catering: 'Catering Request',
-    general: 'General Inquiry',
-  };
+  const inputClassName =
+    'w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] bg-white dark:bg-[#1A1A1A] dark:text-white focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors';
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      {/* Inquiry Type Selection */}
       <div>
         <label className="block text-sm font-medium text-[var(--color-neutral-dark)] mb-3">
           What can I help you with?
         </label>
         <div className="grid grid-cols-3 gap-3">
-          {(['job', 'catering', 'general'] as InquiryType[]).map((type) => (
+          {INQUIRY_TYPES.map((type) => (
             <button
               key={type}
               type="button"
-              onClick={() => setFormData(prev => ({ ...prev, inquiryType: type }))}
-              className={`p-3 rounded-lg text-sm font-medium transition-all ${
-                formData.inquiryType === type
-                  ? type === 'job'
-                    ? 'bg-[var(--color-primary)] text-white'
-                    : type === 'catering'
-                    ? 'bg-[var(--color-secondary)] text-white'
-                    : 'bg-[var(--color-accent)] text-white'
-                  : 'bg-[var(--color-neutral-light)] text-[var(--color-neutral-dark)] hover:bg-[var(--color-neutral-medium)]'
-              }`}
+              onClick={() => handleInquiryTypeChange(type)}
+              className={`p-3 rounded-lg text-sm font-medium transition-all ${getButtonColorClass(type, formData.inquiryType === type)}`}
             >
-              {inquiryTypeLabels[type]}
+              {INQUIRY_TYPE_LABELS[type]}
             </button>
           ))}
         </div>
       </div>
 
-      {/* Name */}
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-[var(--color-neutral-dark)] mb-2">
           Your Name *
@@ -117,12 +159,11 @@ export default function ContactForm() {
           required
           value={formData.name}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] bg-white dark:bg-[#1A1A1A] dark:text-white focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors"
+          className={inputClassName}
           placeholder="John Doe"
         />
       </div>
 
-      {/* Email */}
       <div>
         <label htmlFor="email" className="block text-sm font-medium text-[var(--color-neutral-dark)] mb-2">
           Email Address *
@@ -134,12 +175,11 @@ export default function ContactForm() {
           required
           value={formData.email}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] bg-white dark:bg-[#1A1A1A] dark:text-white focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors"
+          className={inputClassName}
           placeholder="john@example.com"
         />
       </div>
 
-      {/* Phone (optional) */}
       <div>
         <label htmlFor="phone" className="block text-sm font-medium text-[var(--color-neutral-dark)] mb-2">
           Phone Number <span className="text-[var(--color-neutral-dark)]/50">(optional)</span>
@@ -150,12 +190,11 @@ export default function ContactForm() {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] bg-white dark:bg-[#1A1A1A] dark:text-white focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors"
+          className={inputClassName}
           placeholder="(555) 123-4567"
         />
       </div>
 
-      {/* Subject */}
       <div>
         <label htmlFor="subject" className="block text-sm font-medium text-[var(--color-neutral-dark)] mb-2">
           Subject *
@@ -167,18 +206,11 @@ export default function ContactForm() {
           required
           value={formData.subject}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] bg-white dark:bg-[#1A1A1A] dark:text-white focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors"
-          placeholder={
-            formData.inquiryType === 'catering'
-              ? 'e.g., Catering for Wedding Reception'
-              : formData.inquiryType === 'job'
-              ? 'e.g., HR Coordinator Position at ABC Company'
-              : 'How can I help?'
-          }
+          className={inputClassName}
+          placeholder={getSubjectPlaceholder(formData.inquiryType)}
         />
       </div>
 
-      {/* Message */}
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-[var(--color-neutral-dark)] mb-2">
           Message *
@@ -190,35 +222,19 @@ export default function ContactForm() {
           rows={5}
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] bg-white dark:bg-[#1A1A1A] dark:text-white focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors resize-none"
-          placeholder={
-            formData.inquiryType === 'catering'
-              ? 'Please include event date, estimated guest count, and any dietary requirements...'
-              : formData.inquiryType === 'job'
-              ? 'Please tell me about the position and company...'
-              : 'Your message...'
-          }
+          className={`${inputClassName} resize-none`}
+          placeholder={getMessagePlaceholder(formData.inquiryType)}
         />
       </div>
 
-      {/* Submit Button */}
       <button
         type="submit"
         disabled={isSubmitting}
-        className={`w-full py-4 rounded-lg font-medium transition-all ${
-          isSubmitting
-            ? 'bg-[var(--color-neutral-medium)] text-[var(--color-neutral-dark)]/50 cursor-not-allowed'
-            : formData.inquiryType === 'catering'
-            ? 'bg-[var(--color-secondary)] text-white hover:bg-[var(--color-secondary-dark)]'
-            : 'bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-dark)]'
-        }`}
+        className={`w-full py-4 rounded-lg font-medium transition-all ${getSubmitButtonClass(formData.inquiryType, isSubmitting)}`}
       >
         {isSubmitting ? (
           <span className="flex items-center justify-center">
-            <svg className="animate-spin -ml-1 mr-3 h-5 w-5" fill="none" viewBox="0 0 24 24">
-              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-            </svg>
+            <CircleNotch size={20} className="animate-spin mr-3" />
             Sending...
           </span>
         ) : (
@@ -226,7 +242,6 @@ export default function ContactForm() {
         )}
       </button>
 
-      {/* Status Messages */}
       {submitStatus === 'success' && (
         <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
           <p className="text-green-800 dark:text-green-300 text-sm font-medium">
@@ -243,7 +258,6 @@ export default function ContactForm() {
         </div>
       )}
 
-      {/* Note about form */}
       <p className="text-xs text-[var(--color-neutral-dark)]/50 text-center">
         * Form submission will be connected to email delivery shortly.
         For immediate inquiries, please email{' '}
