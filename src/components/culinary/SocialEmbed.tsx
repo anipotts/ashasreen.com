@@ -2,7 +2,7 @@ import { socialLinks } from '@/lib/data';
 
 export default function SocialEmbed() {
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24 bg-white dark:bg-[#1F1F1F]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-serif text-2xl md:text-3xl font-bold text-[var(--color-neutral-dark)] mb-4">

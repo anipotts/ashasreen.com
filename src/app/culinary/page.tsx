@@ -30,7 +30,7 @@ export default function CulinaryPage() {
       </section>
 
       {/* Specialties Section */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-white dark:bg-[#1F1F1F]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-6">
             {/* Specialty Card 1 */}

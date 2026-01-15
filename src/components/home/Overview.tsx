@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Overview() {
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24 bg-white dark:bg-[#1F1F1F]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -127,7 +127,7 @@ export default function Overview() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-8 py-4 bg-[var(--color-neutral-dark)] text-white font-medium rounded-lg hover:bg-[var(--color-neutral-dark)]/90 transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 bg-[var(--color-neutral-dark)] text-white dark:bg-[var(--color-primary)] dark:text-[#1A1A1A] font-medium rounded-lg hover:bg-[var(--color-neutral-dark)]/90 dark:hover:bg-[var(--color-primary-dark)] transition-colors"
           >
             Get In Touch
             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

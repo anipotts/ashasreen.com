@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  /* Warm & Professional Color Palette */
+  /* Warm & Professional Color Palette - Light Mode */
   --color-primary: #D4A853;        /* Warm gold/amber */
   --color-primary-dark: #B8923A;   /* Darker gold for hover states */
   --color-secondary: #C65D3B;      /* Deep terracotta */
@@ -13,6 +13,14 @@
 
   --background: #FAF7F2;
   --foreground: #2D2D2D;
+
+  /* Dark mode specific overrides */
+  --dark-bg: #1A1A1A;
+  --dark-bg-secondary: #242424;
+  --dark-bg-tertiary: #2D2D2D;
+  --dark-text: #F5F5F5;
+  --dark-text-muted: #A0A0A0;
+  --dark-border: #3D3D3D;
 }
 
 @theme inline {
@@ -28,18 +36,31 @@
   --color-neutral-medium: var(--color-neutral-medium);
 }
 
-/* Override dark mode - we want consistent warm aesthetic */
+/* Dark mode color scheme */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #FAF7F2;
-    --foreground: #2D2D2D;
+    --background: #1A1A1A;
+    --foreground: #F5F5F5;
+    --color-neutral-light: #242424;
+    --color-neutral-medium: #3D3D3D;
+    --color-neutral-dark: #F5F5F5;
   }
+}
+
+/* Manual dark mode class support */
+.dark {
+  --background: #1A1A1A;
+  --foreground: #F5F5F5;
+  --color-neutral-light: #242424;
+  --color-neutral-medium: #3D3D3D;
+  --color-neutral-dark: #F5F5F5;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body), system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Smooth scrolling */
@@ -47,7 +68,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - Light */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -65,6 +86,13 @@ html {
   background: var(--color-primary-dark);
 }
 
+/* Dark mode scrollbar */
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    background: #1A1A1A;
+  }
+}
+
 /* Focus styles for accessibility */
 *:focus-visible {
   outline: 2px solid var(--color-primary);
@@ -77,4 +105,10 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .image-placeholder {
+    background: linear-gradient(135deg, #2D2D2D 0%, #242424 100%);
+  }
 }

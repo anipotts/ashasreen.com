@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -43,22 +44,22 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Photo Placeholder */}
+          {/* Photo */}
           <div className="order-1 md:order-2 flex justify-center">
             <div className="relative">
               {/* Decorative elements */}
-              <div className="absolute -top-4 -left-4 w-full h-full border-2 border-[var(--color-primary)] rounded-2xl" />
-              <div className="absolute -bottom-4 -right-4 w-full h-full bg-[var(--color-secondary)]/20 rounded-2xl" />
+              <div className="absolute -top-4 -left-4 w-full h-full border-2 border-[var(--color-primary)] dark:border-[var(--color-primary)]/60 rounded-2xl" />
+              <div className="absolute -bottom-4 -right-4 w-full h-full bg-[var(--color-secondary)]/20 dark:bg-[var(--color-secondary)]/10 rounded-2xl" />
 
               {/* Photo container */}
-              <div className="relative w-64 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden image-placeholder border-4 border-white shadow-2xl">
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-[var(--color-neutral-dark)]/50 p-4">
-                  <svg className="w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                  <p className="text-sm text-center font-medium">Professional Photo</p>
-                  <p className="text-xs text-center mt-1">Coming Soon</p>
-                </div>
+              <div className="relative w-64 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
+                <Image
+                  src="/images/headshot.png"
+                  alt="Asha Sreenivasan"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
