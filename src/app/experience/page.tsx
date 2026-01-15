@@ -20,8 +20,8 @@ export default function ExperiencePage() {
             Professional Experience
           </h1>
           <p className="text-lg text-[var(--color-neutral-dark)]/70 max-w-2xl mx-auto leading-relaxed">
-            My career has been focused on creating exceptional experiences for candidates and
-            supporting HR operations. Here&apos;s a look at my professional journey.
+            My experience centers on supporting hiring teams, coordinating candidates, and maintaining reliable HR processes.
+            I value clear communication, consistency, and creating calm, positive experiences for everyone involved.
           </p>
         </div>
       </section>
@@ -54,13 +54,13 @@ export default function ExperiencePage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { skill: 'Candidate Experience', icon: '👥' },
-              { skill: 'ATS Management', icon: '💻' },
-              { skill: 'Interview Coordination', icon: '📅' },
-              { skill: 'HR Operations', icon: '📋' },
-              { skill: 'Communication', icon: '💬' },
-              { skill: 'Remote Work', icon: '🏠' },
-              { skill: 'Organization', icon: '📁' },
+              { skill: 'Candidate & Employee Support', icon: '👥' },
+              { skill: 'ATS & Record Management', icon: '💻' },
+              { skill: 'Interview Scheduling & Coordination', icon: '📅' },
+              { skill: 'HR Operations & Documentation', icon: '📋' },
+              { skill: 'Clear Communication', icon: '💬' },
+              { skill: 'Remote Work Experience', icon: '🏠' },
+              { skill: 'Organization & Follow-Through', icon: '📁' },
               { skill: 'Problem Solving', icon: '🧩' },
             ].map((item, index) => (
               <div
@@ -84,8 +84,8 @@ export default function ExperiencePage() {
             Let&apos;s Connect
           </h2>
           <p className="text-[var(--color-neutral-medium)] mb-8 max-w-xl mx-auto">
-            For a complete view of my professional background and to connect,
-            visit my LinkedIn profile.
+            For a complete overview of my professional background and experience,
+            please visit my LinkedIn profile.
           </p>
           <a
             href={socialLinks.linkedin}

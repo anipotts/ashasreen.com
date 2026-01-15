@@ -12,7 +12,6 @@ export interface Experience {
   skills: string[];
 }
 
-// Placeholder experiences - to be filled with real data
 export const experiences: Experience[] = [
   {
     id: '1',
@@ -22,28 +21,13 @@ export const experiences: Experience[] = [
     type: 'remote',
     startDate: 'Month Year',
     endDate: 'January 2026',
-    description: 'Supported the full candidate lifecycle by ensuring a positive and seamless experience for all applicants. Managed candidate communications, coordinated interviews, and maintained ATS records with attention to detail and professionalism.',
+    description: 'Supported the full candidate lifecycle with a focus on clear communication and organization. Coordinated interviews, managed candidate correspondence, and maintained accurate ATS records. Served as a reliable point of contact for both candidates and internal teams.',
     highlights: [
-      'Placeholder: Add specific achievement with metrics',
-      'Placeholder: Add another key accomplishment',
-      'Placeholder: Add impact on candidate experience',
+      'Supported recruiters by managing scheduling and candidate communication across multiple roles',
+      'Maintained organized and up-to-date ATS records with strong attention to detail',
+      'Helped create a smooth, respectful experience for candidates throughout the hiring process',
     ],
     skills: ['Candidate Experience', 'ATS Management', 'Interview Coordination', 'HR Operations', 'Communication'],
-  },
-  {
-    id: '2',
-    company: 'Previous Company',
-    role: 'Previous Role Title',
-    location: 'City, State',
-    type: 'onsite',
-    startDate: 'Month Year',
-    endDate: 'Month Year',
-    description: 'Placeholder description for previous role. Update with actual job responsibilities and scope.',
-    highlights: [
-      'Placeholder highlight 1',
-      'Placeholder highlight 2',
-    ],
-    skills: ['Skill 1', 'Skill 2', 'Skill 3'],
   },
 ];
 

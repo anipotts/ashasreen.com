@@ -6,10 +6,10 @@ export default function SocialEmbed() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-serif text-2xl md:text-3xl font-bold text-[var(--color-neutral-dark)] mb-4">
-            Follow the Journey
+            Follow Along
           </h2>
           <p className="text-[var(--color-neutral-dark)]/70 max-w-xl mx-auto">
-            See more of my culinary creations and cooking process on social media.
+            I occasionally share cooking videos and updates on social media, where I&apos;ve received over 1 million views across all platforms.
           </p>
         </div>
 
@@ -33,8 +33,7 @@ export default function SocialEmbed() {
             </div>
 
             <p className="text-[var(--color-neutral-dark)]/70 mb-6">
-              Watch cooking tutorials, recipe walkthroughs, and behind-the-scenes content
-              from large-scale catering events.
+              Cooking videos, traditional recipes, and behind-the-scenes moments from my kitchen!
             </p>
 
             <a
@@ -69,8 +68,7 @@ export default function SocialEmbed() {
             </div>
 
             <p className="text-[var(--color-neutral-dark)]/70 mb-6">
-              Daily updates, fresh dishes, and stories from the kitchen.
-              Follow for the latest creations and catering highlights.
+              Photos and short videos of daily cooking and special dishes.
             </p>
 
             <a

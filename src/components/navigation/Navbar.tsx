@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
+import ThemeToggle from '@/components/ui/ThemeToggle';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -28,7 +29,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -42,6 +43,7 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button */}
@@ -94,6 +96,10 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
+              <div className="px-3 py-2 flex items-center justify-between">
+                <span className="text-sm font-medium text-[var(--color-neutral-dark)]">Theme</span>
+                <ThemeToggle />
+              </div>
             </div>
           </div>
         )}
