@@ -36,7 +36,7 @@ const INQUIRY_TYPES: InquiryType[] = ['job', 'catering', 'general'];
 
 function getButtonColorClass(type: InquiryType, isSelected: boolean): string {
   if (!isSelected) {
-    return 'bg-[var(--color-neutral-light)] text-[var(--color-neutral-dark)] hover:bg-[var(--color-neutral-medium)]';
+    return 'bg-[var(--color-neutral-light)] dark:bg-[#3D3D3D] text-[var(--color-neutral-dark)] dark:text-white hover:bg-[var(--color-neutral-medium)] dark:hover:bg-[#4D4D4D]';
   }
 
   switch (type) {
@@ -126,12 +126,12 @@ export default function ContactForm() {
   }
 
   const inputClassName =
-    'w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] bg-white dark:bg-[#1A1A1A] dark:text-white focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors';
+    'w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] dark:border-[#3D3D3D] bg-white dark:bg-[#1A1A1A] dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors';
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-[var(--color-neutral-dark)] mb-3">
+        <label className="block text-sm font-medium text-[var(--color-neutral-dark)] dark:text-white mb-3">
           What can I help you with?
         </label>
         <div className="grid grid-cols-3 gap-3">
@@ -149,7 +149,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-[var(--color-neutral-dark)] mb-2">
+        <label htmlFor="name" className="block text-sm font-medium text-[var(--color-neutral-dark)] dark:text-white mb-2">
           Your Name *
         </label>
         <input
@@ -165,7 +165,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-[var(--color-neutral-dark)] mb-2">
+        <label htmlFor="email" className="block text-sm font-medium text-[var(--color-neutral-dark)] dark:text-white mb-2">
           Email Address *
         </label>
         <input
@@ -181,8 +181,8 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="phone" className="block text-sm font-medium text-[var(--color-neutral-dark)] mb-2">
-          Phone Number <span className="text-[var(--color-neutral-dark)]/50">(optional)</span>
+        <label htmlFor="phone" className="block text-sm font-medium text-[var(--color-neutral-dark)] dark:text-white mb-2">
+          Phone Number <span className="text-[var(--color-neutral-dark)]/50 dark:text-white/50">(optional)</span>
         </label>
         <input
           type="tel"
@@ -196,7 +196,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="subject" className="block text-sm font-medium text-[var(--color-neutral-dark)] mb-2">
+        <label htmlFor="subject" className="block text-sm font-medium text-[var(--color-neutral-dark)] dark:text-white mb-2">
           Subject *
         </label>
         <input
@@ -212,7 +212,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-[var(--color-neutral-dark)] mb-2">
+        <label htmlFor="message" className="block text-sm font-medium text-[var(--color-neutral-dark)] dark:text-white mb-2">
           Message *
         </label>
         <textarea
@@ -258,7 +258,7 @@ export default function ContactForm() {
         </div>
       )}
 
-      <p className="text-xs text-[var(--color-neutral-dark)]/50 text-center">
+      <p className="text-xs text-[var(--color-neutral-dark)]/50 dark:text-white/50 text-center">
         * Form submission will be connected to email delivery shortly.
         For immediate inquiries, please email{' '}
         <a href="mailto:asreeniv3@gmail.com" className="text-[var(--color-primary)] hover:underline">

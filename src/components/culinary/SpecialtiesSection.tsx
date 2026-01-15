@@ -42,10 +42,10 @@ export default function SpecialtiesSection() {
                 <div className="w-16 h-16 mx-auto mb-4 bg-[var(--color-secondary)]/10 rounded-full flex items-center justify-center">
                   <IconComponent size={32} weight="duotone" className="text-[var(--color-secondary)]" />
                 </div>
-                <h3 className="font-serif text-lg font-semibold text-[var(--color-neutral-dark)] mb-2">
+                <h3 className="font-serif text-lg font-semibold text-[var(--color-neutral-dark)] dark:text-white mb-2">
                   {specialty.title}
                 </h3>
-                <p className="text-sm text-[var(--color-neutral-dark)]/70">
+                <p className="text-sm text-[var(--color-neutral-dark)]/70 dark:text-white/70">
                   {specialty.description}
                 </p>
               </div>

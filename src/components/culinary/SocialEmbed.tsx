@@ -49,10 +49,10 @@ export default function SocialEmbed() {
     <section className="py-16 md:py-24 bg-white dark:bg-[#1F1F1F]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-serif text-2xl md:text-3xl font-bold text-[var(--color-neutral-dark)] mb-4">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold text-[var(--color-neutral-dark)] dark:text-white mb-4">
             Follow Along
           </h2>
-          <p className="text-[var(--color-neutral-dark)]/70 max-w-xl mx-auto">
+          <p className="text-[var(--color-neutral-dark)]/70 dark:text-white/70 max-w-xl mx-auto">
             I occasionally share cooking videos and updates on social media, where I&apos;ve received over 1 million views across all platforms.
           </p>
         </div>
@@ -61,23 +61,23 @@ export default function SocialEmbed() {
           {SOCIAL_CARDS.map((card) => (
             <div
               key={card.platform}
-              className="bg-[var(--color-neutral-light)] rounded-2xl p-8 border border-[var(--color-neutral-medium)]"
+              className="bg-[var(--color-neutral-light)] dark:bg-[#242424] rounded-2xl p-8 border border-[var(--color-neutral-medium)] dark:border-[#3D3D3D]"
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className={`w-12 h-12 ${card.iconBgClass} rounded-xl flex items-center justify-center`}>
                   {card.icon}
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl font-semibold text-[var(--color-neutral-dark)]">
+                  <h3 className="font-serif text-xl font-semibold text-[var(--color-neutral-dark)] dark:text-white">
                     {card.name}
                   </h3>
-                  <p className="text-[var(--color-neutral-dark)]/60 text-sm">
+                  <p className="text-[var(--color-neutral-dark)]/60 dark:text-white/60 text-sm">
                     {card.stats}
                   </p>
                 </div>
               </div>
 
-              <p className="text-[var(--color-neutral-dark)]/70 mb-6">
+              <p className="text-[var(--color-neutral-dark)]/70 dark:text-white/70 mb-6">
                 {card.description}
               </p>
 

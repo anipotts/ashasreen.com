@@ -26,7 +26,7 @@ function getCategoryFilterClass(isActive: boolean): string {
   if (isActive) {
     return `${baseClass} bg-[var(--color-secondary)] text-white`;
   }
-  return `${baseClass} bg-[var(--color-neutral-light)] text-[var(--color-neutral-dark)] hover:bg-[var(--color-neutral-medium)]`;
+  return `${baseClass} bg-[var(--color-neutral-light)] dark:bg-[#3D3D3D] text-[var(--color-neutral-dark)] dark:text-white hover:bg-[var(--color-neutral-medium)] dark:hover:bg-[#4D4D4D]`;
 }
 
 export default function FoodGallery({ items }: FoodGalleryProps) {
@@ -77,17 +77,17 @@ export default function FoodGallery({ items }: FoodGalleryProps) {
           <button
             key={item.id}
             onClick={() => handleItemSelect(item)}
-            className="group relative aspect-square rounded-xl overflow-hidden bg-[var(--color-neutral-medium)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-secondary)]"
+            className="group relative aspect-square rounded-xl overflow-hidden bg-[var(--color-neutral-medium)] dark:bg-[#3D3D3D] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-secondary)]"
             type="button"
           >
             <div className="absolute inset-0 image-placeholder">
-              <div className="flex flex-col items-center justify-center text-[var(--color-neutral-dark)]/40">
+              <div className="flex flex-col items-center justify-center text-[var(--color-neutral-dark)]/40 dark:text-white/40">
                 <ImageIcon size={48} weight="duotone" className="mb-2" />
                 <span className="text-xs">Photo coming soon</span>
               </div>
             </div>
 
-            <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-neutral-dark)] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
             <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
               <h3 className="font-serif text-lg font-semibold text-white">
@@ -121,7 +121,7 @@ export default function FoodGallery({ items }: FoodGalleryProps) {
           >
             <button
               onClick={handleCloseModal}
-              className="absolute top-4 right-4 p-2 rounded-full bg-[var(--color-neutral-light)] hover:bg-[var(--color-neutral-medium)] transition-colors z-10"
+              className="absolute top-4 right-4 p-2 rounded-full bg-[var(--color-neutral-light)] dark:bg-[#3D3D3D] text-[var(--color-neutral-dark)] dark:text-white hover:bg-[var(--color-neutral-medium)] dark:hover:bg-[#4D4D4D] transition-colors z-10"
               aria-label="Close"
               type="button"
             >
@@ -129,7 +129,7 @@ export default function FoodGallery({ items }: FoodGalleryProps) {
             </button>
 
             <div className="aspect-video image-placeholder">
-              <div className="flex flex-col items-center justify-center text-[var(--color-neutral-dark)]/40">
+              <div className="flex flex-col items-center justify-center text-[var(--color-neutral-dark)]/40 dark:text-white/40">
                 <ImageIcon size={64} weight="duotone" className="mb-2" />
                 <span className="text-sm">Photo coming soon</span>
               </div>
@@ -139,10 +139,10 @@ export default function FoodGallery({ items }: FoodGalleryProps) {
               <span className="inline-block px-3 py-1 bg-[var(--color-secondary)]/10 text-[var(--color-secondary)] text-sm font-medium rounded-full capitalize mb-3">
                 {selectedItem.category}
               </span>
-              <h3 id="modal-title" className="font-serif text-2xl font-bold text-[var(--color-neutral-dark)] mb-3">
+              <h3 id="modal-title" className="font-serif text-2xl font-bold text-[var(--color-neutral-dark)] dark:text-white mb-3">
                 {selectedItem.title}
               </h3>
-              <p className="text-[var(--color-neutral-dark)]/70 leading-relaxed">
+              <p className="text-[var(--color-neutral-dark)]/70 dark:text-white/70 leading-relaxed">
                 {selectedItem.description}
               </p>
             </div>
