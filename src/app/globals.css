@@ -35,20 +35,6 @@
 }
 
 /* ============================================================================
-   Color Variables - Dark Mode (System Preference Fallback)
-   ============================================================================ */
-
-@media (prefers-color-scheme: dark) {
-  :root:not(.light) {
-    --background: #1A1A1A;
-    --foreground: #F5F5F5;
-    --color-neutral-light: #242424;
-    --color-neutral-medium: #3D3D3D;
-    --color-neutral-dark: #F5F5F5;
-  }
-}
-
-/* ============================================================================
    Tailwind Theme Configuration
    ============================================================================ */
 
