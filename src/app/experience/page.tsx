@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 
 export default function ExperiencePage() {
   return (
-    <div className="min-h-screen bg-[var(--color-neutral-light)] dark:bg-[#1A1A1A]">
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white dark:from-[#1F1F1F] to-[var(--color-neutral-light)] dark:to-[#1A1A1A]">
+    <div className="min-h-screen bg-[var(--color-neutral-light)] dark:bg-[#0D0D0D]">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white dark:from-[#0D0D0D] to-[var(--color-neutral-light)] dark:to-[#0D0D0D]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-[var(--color-primary)] font-medium mb-2 tracking-wide uppercase text-sm">
             Career Journey
@@ -35,7 +35,7 @@ export default function ExperiencePage() {
             ))}
           </div>
 
-          <div className="mt-8 p-6 bg-[var(--color-primary)]/5 dark:bg-[#242424] rounded-xl border border-[var(--color-primary)]/20 dark:border-[var(--color-primary)]/30">
+          <div className="mt-8 p-6 bg-[var(--color-primary)]/5 dark:bg-[#1A1A1A] rounded-xl border border-[var(--color-primary)]/20 dark:border-[var(--color-primary)]/30">
             <p className="text-sm text-[var(--color-neutral-dark)]/70 dark:text-white/70 text-center">
               <span className="font-medium text-[var(--color-primary)]">Note:</span> These are placeholder entries.
               Full details will be added soon with specific achievements and metrics.
@@ -46,7 +46,7 @@ export default function ExperiencePage() {
 
       <CoreCompetencies />
 
-      <section className="py-16 md:py-24 bg-[var(--color-neutral-dark)] dark:bg-[#1F1F1F]">
+      <section className="py-16 md:py-24 bg-[var(--color-neutral-dark)] dark:bg-[#0D0D0D]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-2xl md:text-3xl font-bold text-[var(--color-neutral-light)] dark:text-white mb-4">
             Let&apos;s Connect

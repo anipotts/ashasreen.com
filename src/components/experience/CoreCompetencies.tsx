@@ -30,7 +30,7 @@ const COMPETENCIES: Competency[] = [
 
 export default function CoreCompetencies() {
   return (
-    <section className="py-12 bg-[var(--color-primary)]/5 dark:bg-[#1F1F1F]">
+    <section className="py-12 bg-[var(--color-primary)]/5 dark:bg-[#0D0D0D]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="font-serif text-2xl md:text-3xl font-bold text-[var(--color-neutral-dark)] dark:text-white mb-8 text-center">
           Core Competencies
@@ -42,7 +42,7 @@ export default function CoreCompetencies() {
             return (
               <div
                 key={item.skill}
-                className="p-4 bg-[var(--color-neutral-light)] dark:bg-[#242424] rounded-xl text-center border border-[var(--color-neutral-medium)] dark:border-[#3D3D3D] hover:border-[var(--color-primary)] transition-colors"
+                className="p-4 bg-[var(--color-neutral-light)] dark:bg-[#1A1A1A] rounded-xl text-center border border-[var(--color-neutral-medium)] dark:border-[#2D2D2D] hover:border-[var(--color-primary)] transition-colors"
               >
                 <IconComponent
                   size={28}
