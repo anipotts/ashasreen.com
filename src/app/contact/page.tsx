@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 function ContactFormWrapper() {
   return (
-    <Suspense fallback={<div className="animate-pulse bg-[var(--color-neutral-medium)] dark:bg-[#3D3D3D] h-96 rounded-xl" />}>
+    <Suspense fallback={<div className="animate-pulse bg-[var(--color-neutral-medium)] dark:bg-[#2D2D2D] h-96 rounded-xl" />}>
       <ContactForm />
     </Suspense>
   );
@@ -76,8 +76,8 @@ const SOCIAL_MEDIA_LINKS: ContactLink[] = [
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-[var(--color-neutral-light)] dark:bg-[#1A1A1A]">
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white dark:from-[#1F1F1F] to-[var(--color-neutral-light)] dark:to-[#1A1A1A]">
+    <div className="min-h-screen bg-[var(--color-neutral-light)] dark:bg-[#0D0D0D]">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white dark:from-[#0D0D0D] to-[var(--color-neutral-light)] dark:to-[#0D0D0D]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-[var(--color-primary)] font-medium mb-2 tracking-wide uppercase text-sm">
             Get In Touch
@@ -96,13 +96,13 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
-              <div className="bg-white dark:bg-[#242424] rounded-2xl p-6 md:p-8 shadow-sm border border-[var(--color-neutral-medium)] dark:border-[#3D3D3D]">
+              <div className="bg-white dark:bg-[#1A1A1A] rounded-2xl p-6 md:p-8 shadow-sm border border-[var(--color-neutral-medium)] dark:border-[#2D2D2D]">
                 <ContactFormWrapper />
               </div>
             </div>
 
             <div className="space-y-6">
-              <div className="bg-white dark:bg-[#242424] rounded-2xl p-6 border border-[var(--color-neutral-medium)] dark:border-[#3D3D3D]">
+              <div className="bg-white dark:bg-[#1A1A1A] rounded-2xl p-6 border border-[var(--color-neutral-medium)] dark:border-[#2D2D2D]">
                 <h3 className="font-serif text-lg font-semibold text-[var(--color-neutral-dark)] dark:text-white mb-4">
                   Direct Contact
                 </h3>
@@ -127,7 +127,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="bg-white dark:bg-[#242424] rounded-2xl p-6 border border-[var(--color-neutral-medium)] dark:border-[#3D3D3D]">
+              <div className="bg-white dark:bg-[#1A1A1A] rounded-2xl p-6 border border-[var(--color-neutral-medium)] dark:border-[#2D2D2D]">
                 <h3 className="font-serif text-lg font-semibold text-[var(--color-neutral-dark)] dark:text-white mb-4">
                   Social Media
                 </h3>
@@ -152,7 +152,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="bg-[var(--color-primary)]/5 dark:bg-[#242424] rounded-2xl p-6 border border-[var(--color-primary)]/20 dark:border-[var(--color-primary)]/30">
+              <div className="bg-[var(--color-primary)]/5 dark:bg-[#1A1A1A] rounded-2xl p-6 border border-[var(--color-primary)]/20 dark:border-[var(--color-primary)]/30">
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 bg-[var(--color-primary)]/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Clock size={20} weight="duotone" className="text-[var(--color-primary)]" />

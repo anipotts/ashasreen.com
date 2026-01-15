@@ -36,7 +36,7 @@ const INQUIRY_TYPES: InquiryType[] = ['job', 'catering', 'general'];
 
 function getButtonColorClass(type: InquiryType, isSelected: boolean): string {
   if (!isSelected) {
-    return 'bg-[var(--color-neutral-light)] dark:bg-[#3D3D3D] text-[var(--color-neutral-dark)] dark:text-white hover:bg-[var(--color-neutral-medium)] dark:hover:bg-[#4D4D4D]';
+    return 'bg-[var(--color-neutral-light)] dark:bg-[#2D2D2D] text-[var(--color-neutral-dark)] dark:text-white hover:bg-[var(--color-neutral-medium)] dark:hover:bg-[#3D3D3D]';
   }
 
   switch (type) {
@@ -126,7 +126,7 @@ export default function ContactForm() {
   }
 
   const inputClassName =
-    'w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] dark:border-[#3D3D3D] bg-white dark:bg-[#1A1A1A] dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors';
+    'w-full px-4 py-3 rounded-lg border border-[var(--color-neutral-medium)] dark:border-[#2D2D2D] bg-white dark:bg-[#0D0D0D] dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors';
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">

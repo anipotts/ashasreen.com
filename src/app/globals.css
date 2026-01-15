@@ -27,11 +27,11 @@
    ============================================================================ */
 
 .dark {
-  --background: #1A1A1A;
-  --foreground: #F5F5F5;
-  --color-neutral-light: #242424;
-  --color-neutral-medium: #3D3D3D;
-  --color-neutral-dark: #F5F5F5;
+  --background: #0D0D0D;
+  --foreground: #FAFAFA;
+  --color-neutral-light: #1A1A1A;
+  --color-neutral-medium: #2D2D2D;
+  --color-neutral-dark: #FAFAFA;
 }
 
 /* ============================================================================

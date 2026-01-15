@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function CulinaryPage() {
   return (
-    <div className="min-h-screen bg-[var(--color-neutral-light)] dark:bg-[#1A1A1A]">
+    <div className="min-h-screen bg-[var(--color-neutral-light)] dark:bg-[#0D0D0D]">
       <section className="py-16 md:py-24 bg-gradient-to-b from-[var(--color-secondary)]/10 dark:from-[var(--color-secondary)]/5 to-[var(--color-neutral-light)] dark:to-[#1A1A1A]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-[var(--color-secondary)] font-medium mb-2 tracking-wide uppercase text-sm">
@@ -46,7 +46,7 @@ export default function CulinaryPage() {
 
           <FoodGallery items={foodItems} />
 
-          <div className="mt-8 p-6 bg-[var(--color-secondary)]/5 dark:bg-[#242424] rounded-xl border border-[var(--color-secondary)]/20 dark:border-[var(--color-secondary)]/30 text-center">
+          <div className="mt-8 p-6 bg-[var(--color-secondary)]/5 dark:bg-[#1A1A1A] rounded-xl border border-[var(--color-secondary)]/20 dark:border-[var(--color-secondary)]/30 text-center">
             <p className="text-sm text-[var(--color-neutral-dark)]/70 dark:text-white/70">
               <span className="font-medium text-[var(--color-secondary)]">Note:</span> Photos coming soon
             </p>

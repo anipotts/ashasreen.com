@@ -46,7 +46,7 @@ const SOCIAL_CARDS: SocialCard[] = [
 
 export default function SocialEmbed() {
   return (
-    <section className="py-16 md:py-24 bg-white dark:bg-[#1F1F1F]">
+    <section className="py-16 md:py-24 bg-white dark:bg-[#0D0D0D]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-serif text-2xl md:text-3xl font-bold text-[var(--color-neutral-dark)] dark:text-white mb-4">
@@ -61,7 +61,7 @@ export default function SocialEmbed() {
           {SOCIAL_CARDS.map((card) => (
             <div
               key={card.platform}
-              className="bg-[var(--color-neutral-light)] dark:bg-[#242424] rounded-2xl p-8 border border-[var(--color-neutral-medium)] dark:border-[#3D3D3D]"
+              className="bg-[var(--color-neutral-light)] dark:bg-[#1A1A1A] rounded-2xl p-8 border border-[var(--color-neutral-medium)] dark:border-[#2D2D2D]"
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className={`w-12 h-12 ${card.iconBgClass} rounded-xl flex items-center justify-center`}>

@@ -56,7 +56,7 @@ const OVERVIEW_CARDS: OverviewCard[] = [
 
 export default function Overview() {
   return (
-    <section className="py-16 md:py-24 bg-white dark:bg-[#1F1F1F]">
+    <section className="py-16 md:py-24 bg-white dark:bg-[#0D0D0D]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-neutral-dark)] dark:text-white mb-4">
@@ -72,7 +72,7 @@ export default function Overview() {
           {OVERVIEW_CARDS.map((card) => (
             <div
               key={card.title}
-              className={`group relative bg-[var(--color-neutral-light)] dark:bg-[#242424] rounded-2xl p-8 border border-[var(--color-neutral-medium)] dark:border-[#3D3D3D] ${card.borderHoverClass} transition-all duration-300 hover:shadow-xl`}
+              className={`group relative bg-[var(--color-neutral-light)] dark:bg-[#1A1A1A] rounded-2xl p-8 border border-[var(--color-neutral-medium)] dark:border-[#2D2D2D] ${card.borderHoverClass} transition-all duration-300 hover:shadow-xl`}
             >
               <div className={`w-14 h-14 ${card.iconBgClass} rounded-xl flex items-center justify-center mb-6 ${card.iconHoverClass} transition-colors`}>
                 {card.icon}
@@ -112,7 +112,7 @@ export default function Overview() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-8 py-4 bg-[var(--color-neutral-dark)] text-white dark:bg-[var(--color-primary)] dark:text-[#1A1A1A] font-medium rounded-lg hover:bg-[var(--color-neutral-dark)]/90 dark:hover:bg-[var(--color-primary-dark)] transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 bg-[var(--color-neutral-dark)] text-white dark:bg-[var(--color-primary)] dark:text-[#0D0D0D] font-medium rounded-lg hover:bg-[var(--color-neutral-dark)]/90 dark:hover:bg-[var(--color-primary-dark)] transition-colors"
           >
             Get In Touch
             <EnvelopeSimple size={20} weight="duotone" className="ml-2" />

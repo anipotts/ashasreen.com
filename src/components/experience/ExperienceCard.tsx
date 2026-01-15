@@ -32,7 +32,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
   }
 
   return (
-    <div className="bg-white dark:bg-[#242424] rounded-xl border border-[var(--color-neutral-medium)] dark:border-[#3D3D3D] hover:border-[var(--color-primary)] transition-all duration-300 overflow-hidden">
+    <div className="bg-white dark:bg-[#1A1A1A] rounded-xl border border-[var(--color-neutral-medium)] dark:border-[#2D2D2D] hover:border-[var(--color-primary)] transition-all duration-300 overflow-hidden">
       <button
         onClick={toggleExpanded}
         className="w-full p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:ring-inset"
@@ -65,7 +65,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
               </p>
             </div>
 
-            <div className={`p-2 rounded-full bg-[var(--color-neutral-light)] dark:bg-[#3D3D3D] transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}>
+            <div className={`p-2 rounded-full bg-[var(--color-neutral-light)] dark:bg-[#2D2D2D] transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}>
               <CaretDown size={20} weight="bold" className="text-[var(--color-neutral-dark)] dark:text-white" />
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
           isExpanded ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="px-6 pb-6 border-t border-[var(--color-neutral-medium)] dark:border-[#3D3D3D]">
+        <div className="px-6 pb-6 border-t border-[var(--color-neutral-medium)] dark:border-[#2D2D2D]">
           <div className="pt-6">
             <p className="text-[var(--color-neutral-dark)]/80 dark:text-white/80 leading-relaxed mb-6">
               {experience.description}
@@ -101,7 +101,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
                 {experience.skills.map((skill, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-[var(--color-neutral-light)] dark:bg-[#3D3D3D] text-[var(--color-neutral-dark)]/80 dark:text-white/80 text-sm rounded-full border border-[var(--color-neutral-medium)] dark:border-[#4D4D4D]"
+                    className="px-3 py-1 bg-[var(--color-neutral-light)] dark:bg-[#2D2D2D] text-[var(--color-neutral-dark)]/80 dark:text-white/80 text-sm rounded-full border border-[var(--color-neutral-medium)] dark:border-[#2D2D2D]"
                   >
                     {skill}
                   </span>

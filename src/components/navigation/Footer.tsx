@@ -52,7 +52,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[var(--color-neutral-dark)] dark:bg-[#1A1A1A] text-[var(--color-neutral-light)] dark:text-white">
+    <footer className="bg-[var(--color-neutral-dark)] dark:bg-[#0D0D0D] text-[var(--color-neutral-light)] dark:text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>

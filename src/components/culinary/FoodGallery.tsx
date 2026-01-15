@@ -26,7 +26,7 @@ function getCategoryFilterClass(isActive: boolean): string {
   if (isActive) {
     return `${baseClass} bg-[var(--color-secondary)] text-white`;
   }
-  return `${baseClass} bg-[var(--color-neutral-light)] dark:bg-[#3D3D3D] text-[var(--color-neutral-dark)] dark:text-white hover:bg-[var(--color-neutral-medium)] dark:hover:bg-[#4D4D4D]`;
+  return `${baseClass} bg-[var(--color-neutral-light)] dark:bg-[#2D2D2D] text-[var(--color-neutral-dark)] dark:text-white hover:bg-[var(--color-neutral-medium)] dark:hover:bg-[#3D3D3D]`;
 }
 
 export default function FoodGallery({ items }: FoodGalleryProps) {
@@ -77,7 +77,7 @@ export default function FoodGallery({ items }: FoodGalleryProps) {
           <button
             key={item.id}
             onClick={() => handleItemSelect(item)}
-            className="group relative aspect-square rounded-xl overflow-hidden bg-[var(--color-neutral-medium)] dark:bg-[#3D3D3D] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-secondary)]"
+            className="group relative aspect-square rounded-xl overflow-hidden bg-[var(--color-neutral-medium)] dark:bg-[#2D2D2D] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-secondary)]"
             type="button"
           >
             <div className="absolute inset-0 image-placeholder">
@@ -116,12 +116,12 @@ export default function FoodGallery({ items }: FoodGalleryProps) {
           aria-labelledby="modal-title"
         >
           <div
-            className="relative bg-white dark:bg-[#242424] rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-auto"
+            className="relative bg-white dark:bg-[#1A1A1A] rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-auto"
             onClick={handleModalContentClick}
           >
             <button
               onClick={handleCloseModal}
-              className="absolute top-4 right-4 p-2 rounded-full bg-[var(--color-neutral-light)] dark:bg-[#3D3D3D] text-[var(--color-neutral-dark)] dark:text-white hover:bg-[var(--color-neutral-medium)] dark:hover:bg-[#4D4D4D] transition-colors z-10"
+              className="absolute top-4 right-4 p-2 rounded-full bg-[var(--color-neutral-light)] dark:bg-[#2D2D2D] text-[var(--color-neutral-dark)] dark:text-white hover:bg-[var(--color-neutral-medium)] dark:hover:bg-[#3D3D3D] transition-colors z-10"
               aria-label="Close"
               type="button"
             >

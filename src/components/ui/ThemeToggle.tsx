@@ -5,15 +5,6 @@ import { Sun, Moon } from '@phosphor-icons/react';
 
 type Theme = 'light' | 'dark';
 
-function getInitialTheme(): Theme {
-  if (typeof window === 'undefined') {
-    return 'light';
-  }
-  const savedTheme = localStorage.getItem('theme') as Theme | null;
-  // Default to light mode - only use saved theme if it exists
-  return savedTheme || 'light';
-}
-
 function applyThemeToDOM(newTheme: Theme): void {
   if (newTheme === 'dark') {
     document.documentElement.classList.add('dark');
@@ -23,14 +14,23 @@ function applyThemeToDOM(newTheme: Theme): void {
 }
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+  // Start with 'light' - will sync with actual state on mount
+  const [theme, setTheme] = useState<Theme>('light');
   const [mounted, setMounted] = useState(false);
 
-  // Apply theme on mount and whenever it changes
+  // Sync with actual DOM state and localStorage on mount
   useEffect(() => {
+    // Check what the DOM actually has (set by inline script)
+    const isDarkClass = document.documentElement.classList.contains('dark');
+    // Check localStorage for saved preference
+    const savedTheme = localStorage.getItem('theme') as Theme | null;
+    // Use saved theme if exists, otherwise use DOM state, otherwise default to light
+    const actualTheme = savedTheme || (isDarkClass ? 'dark' : 'light');
+    setTheme(actualTheme);
+    // Ensure DOM matches the resolved theme
+    applyThemeToDOM(actualTheme);
     setMounted(true);
-    applyThemeToDOM(theme);
-  }, [theme]);
+  }, []);
 
   const toggleTheme = (): void => {
     const newTheme: Theme = theme === 'dark' ? 'light' : 'dark';
