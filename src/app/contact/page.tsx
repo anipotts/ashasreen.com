@@ -86,8 +86,8 @@ export default function ContactPage() {
             Let&apos;s Connect
           </h1>
           <p className="text-lg text-[var(--color-neutral-dark)]/70 dark:text-white/70 max-w-2xl mx-auto leading-relaxed">
-            Whether you&apos;re reaching out about a professional opportunity, have a question,
-            or would like to connect, I&apos;d be happy to hear from you.
+            Whether you&apos;re interested in discussing HR opportunities, planning a catering event,
+            or simply want to connect, I&apos;d love to hear from you.
           </p>
         </div>
       </section>
