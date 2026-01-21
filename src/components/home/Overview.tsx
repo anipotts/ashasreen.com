@@ -19,7 +19,7 @@ const OVERVIEW_CARDS: OverviewCard[] = [
   {
     title: 'HR & People Operations',
     description:
-      'I support recruiters and managers by handling the details that keep hiring and onboarding running smoothly. From scheduling interviews to maintaining accurate records, I take pride in being dependable, organized, and thoughtful in every interaction.',
+      'Experienced in managing the full candidate lifecycle with precision and care. I streamline interview coordination, maintain organized ATS records, and ensure clear communication between hiring teams and candidates at every stage.',
     icon: <Briefcase size={28} weight="duotone" className="text-[var(--color-primary)]" />,
     iconBgClass: 'bg-[var(--color-primary)]/10',
     iconHoverClass: 'group-hover:bg-[var(--color-primary)]/20',
@@ -37,15 +37,15 @@ const OVERVIEW_CARDS: OverviewCard[] = [
   {
     title: 'Culinary Work',
     description:
-      'Outside of my professional work, I run a home-based culinary project focused on traditional South Indian cuisine. Cooking has always been my way of bringing people together, and it reflects the same care and patience I bring to my professional life.',
+      'Accomplished home-based caterer specializing in authentic South Indian cuisine. With over 1 million views on my cooking content and experience catering events for 50-100+ guests, I bring the same attention to detail to my culinary work as I do to my professional career.',
     icon: <BookOpen size={28} weight="duotone" className="text-[var(--color-secondary)]" />,
     iconBgClass: 'bg-[var(--color-secondary)]/10',
     iconHoverClass: 'group-hover:bg-[var(--color-secondary)]/20',
     borderHoverClass: 'hover:border-[var(--color-secondary)]',
     features: [
-      'Large-Scale Home Catering',
+      'Large-Scale Event Catering (50-100+ guests)',
       'Traditional South Indian Recipes',
-      'Signature Biryani',
+      'Signature Biryani Specialist',
     ],
     featureIconClass: 'text-[var(--color-secondary)]',
     linkHref: '/culinary',
@@ -60,11 +60,11 @@ export default function Overview() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-neutral-dark)] dark:text-white mb-4">
-            Professional Work, Guided by Care
+            What I Do
           </h2>
           <p className="text-[var(--color-neutral-dark)]/70 dark:text-white/70 max-w-2xl mx-auto">
-            Whether I&apos;m supporting hiring teams or preparing meals for a gathering, I approach my work with patience,
-            intention, and responsibility. I believe good systems — and good people — make all the difference.
+            Two areas of expertise that share a common foundation: meticulous attention to detail,
+            clear communication, and a commitment to creating positive experiences for everyone involved.
           </p>
         </div>
 
@@ -112,7 +112,7 @@ export default function Overview() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-8 py-4 bg-[var(--color-neutral-dark)] text-white dark:bg-[var(--color-primary)] dark:text-[#0D0D0D] font-medium rounded-lg hover:bg-[var(--color-neutral-dark)]/90 dark:hover:bg-[var(--color-primary-dark)] transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 bg-[var(--color-primary)] text-white font-medium rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors shadow-lg shadow-[var(--color-primary)]/25"
           >
             Get In Touch
             <EnvelopeSimple size={20} weight="duotone" className="ml-2" />

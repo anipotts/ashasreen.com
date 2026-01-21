@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
-import { LinkedinLogo } from '@phosphor-icons/react/dist/ssr';
+import { LinkedinLogo, FilePdf } from '@phosphor-icons/react/dist/ssr';
 import ExperienceCard from '@/components/experience/ExperienceCard';
 import CoreCompetencies from '@/components/experience/CoreCompetencies';
 import { experiences, socialLinks } from '@/lib/data';
+
+const RESUME_PATH = '/resumes/asha-sreenivasan-resume-jan-2026.pdf';
 
 export const metadata: Metadata = {
   title: 'Experience',
@@ -21,8 +23,8 @@ export default function ExperiencePage() {
             Professional Experience
           </h1>
           <p className="text-lg text-[var(--color-neutral-dark)]/70 dark:text-white/70 max-w-2xl mx-auto leading-relaxed">
-            My experience centers on supporting hiring teams, coordinating candidates, and maintaining reliable HR processes.
-            I value clear communication, consistency, and creating calm, positive experiences for everyone involved.
+            Skilled in managing end-to-end hiring coordination, ATS administration, and candidate communications.
+            I bring structure and reliability to HR operations while maintaining the human touch that creates exceptional candidate experiences.
           </p>
         </div>
       </section>
@@ -35,35 +37,38 @@ export default function ExperiencePage() {
             ))}
           </div>
 
-          <div className="mt-8 p-6 bg-[var(--color-primary)]/5 dark:bg-[#1A1A1A] rounded-xl border border-[var(--color-primary)]/20 dark:border-[var(--color-primary)]/30">
-            <p className="text-sm text-[var(--color-neutral-dark)]/70 dark:text-white/70 text-center">
-              <span className="font-medium text-[var(--color-primary)]">Note:</span> These are placeholder entries.
-              Full details will be added soon with specific achievements and metrics.
-            </p>
-          </div>
         </div>
       </section>
 
       <CoreCompetencies />
 
-      <section className="py-16 md:py-24 bg-[var(--color-neutral-dark)] dark:bg-[#0D0D0D]">
+      <section className="py-16 md:py-24 bg-[var(--color-primary)] dark:bg-[#0D0D0D]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-2xl md:text-3xl font-bold text-[var(--color-neutral-light)] dark:text-white mb-4">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold text-white dark:text-white mb-4">
             Let&apos;s Connect
           </h2>
-          <p className="text-[var(--color-neutral-medium)] dark:text-gray-400 mb-8 max-w-xl mx-auto">
-            For a complete overview of my professional background and experience,
-            please visit my LinkedIn profile.
+          <p className="text-white/80 dark:text-gray-400 mb-8 max-w-xl mx-auto">
+            Download my resume or connect with me on LinkedIn to learn more about my professional background.
           </p>
-          <a
-            href={socialLinks.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 bg-[var(--color-primary)] text-white font-medium rounded-lg hover:bg-[var(--color-primary-dark)] transition-colors"
-          >
-            <LinkedinLogo size={20} weight="duotone" className="mr-2" />
-            View LinkedIn Profile
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href={RESUME_PATH}
+              download
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-[var(--color-primary)] font-medium rounded-lg hover:bg-[var(--color-neutral-light)] transition-colors"
+            >
+              <FilePdf size={20} weight="duotone" className="mr-2" />
+              Download Resume
+            </a>
+            <a
+              href={socialLinks.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white/10 dark:bg-[var(--color-primary)] text-white dark:text-white font-medium rounded-lg hover:bg-white/20 dark:hover:bg-[var(--color-primary-dark)] transition-colors border border-white/30 dark:border-transparent"
+            >
+              <LinkedinLogo size={20} weight="duotone" className="mr-2" />
+              View LinkedIn Profile
+            </a>
+          </div>
         </div>
       </section>
     </div>

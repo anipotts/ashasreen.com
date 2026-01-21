@@ -52,14 +52,14 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[var(--color-neutral-dark)] dark:bg-[#0D0D0D] text-[var(--color-neutral-light)] dark:text-white">
+    <footer className="bg-white dark:bg-[#0D0D0D] border-t border-[var(--color-neutral-medium)] dark:border-[#2D2D2D]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="font-serif text-xl font-semibold text-[var(--color-primary)] mb-4">
               Asha Sreenivasan
             </h3>
-            <p className="text-sm text-[var(--color-neutral-medium)] dark:text-gray-400 leading-relaxed">
+            <p className="text-sm text-[var(--color-neutral-dark)]/70 dark:text-gray-400 leading-relaxed">
               HR professional with experience supporting recruiters, candidates, and people operations.
               Also a home-based South Indian cook specializing in traditional cuisine and community gatherings.
             </p>
@@ -72,7 +72,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-[var(--color-neutral-medium)] dark:text-gray-400 hover:text-[var(--color-primary)] transition-colors"
+                    className="text-sm text-[var(--color-neutral-dark)]/70 dark:text-gray-400 hover:text-[var(--color-primary)] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -90,7 +90,7 @@ export default function Footer() {
                   href={social.href}
                   target={social.href.startsWith('mailto:') ? undefined : '_blank'}
                   rel={social.href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
-                  className={`p-2 rounded-full bg-[var(--color-neutral-light)]/10 dark:bg-white/10 ${social.hoverColor} transition-colors`}
+                  className={`p-2 rounded-full bg-[var(--color-primary)]/10 dark:bg-white/10 text-[var(--color-neutral-dark)] dark:text-white ${social.hoverColor} hover:text-white transition-colors`}
                   aria-label={social.label}
                 >
                   {social.icon}
@@ -100,8 +100,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-[var(--color-neutral-light)]/10 dark:border-white/10 text-center">
-          <p className="text-sm text-[var(--color-neutral-medium)] dark:text-gray-400">
+        <div className="mt-8 pt-8 border-t border-[var(--color-neutral-medium)] dark:border-white/10 text-center">
+          <p className="text-sm text-[var(--color-neutral-dark)]/60 dark:text-gray-400">
             &copy; {currentYear} Asha Sreenivasan. All rights reserved.
           </p>
         </div>

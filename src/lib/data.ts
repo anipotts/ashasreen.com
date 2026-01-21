@@ -59,18 +59,18 @@ export const experiences: Experience[] = [
     startDate: 'Month Year',
     endDate: 'January 2026',
     description:
-      'Supported the full candidate lifecycle with a focus on clear communication and organization. Coordinated interviews, managed candidate correspondence, and maintained accurate ATS records. Served as a reliable point of contact for both candidates and internal teams.',
+      'Managed the full candidate lifecycle including interview coordination, ATS administration, and stakeholder communication. Ensured efficient hiring processes while delivering a high-quality candidate experience from initial outreach through onboarding.',
     highlights: [
-      'Supported recruiters by managing scheduling and candidate communication across multiple roles',
-      'Maintained organized and up-to-date ATS records with strong attention to detail',
-      'Helped create a smooth, respectful experience for candidates throughout the hiring process',
+      'Coordinated interview scheduling and candidate communication across multiple concurrent roles',
+      'Maintained comprehensive ATS records with 100% data accuracy and timely updates',
+      'Delivered responsive, professional candidate support resulting in positive hiring outcomes',
     ],
     skills: [
       'Candidate Experience',
       'ATS Management',
       'Interview Coordination',
       'HR Operations',
-      'Communication',
+      'Stakeholder Communication',
     ],
   },
 ];

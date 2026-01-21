@@ -4,65 +4,65 @@
   "realtime_memories": [
     {
       "type": "project_context",
-      "content": "Building portfolio website for Asha Sreenivasan who was recently laid off from HR Assistant/Candidate Experience Specialist role at People Science (remote). Site serves dual purpose: showcase HR/People Operations experience for job search + display South Indian culinary catering business (biryani specialty for 50-100+ guests). Domain: ashasreen.com. Contact: asreeniv3@gmail.com",
+      "content": "Portfolio website for Asha Sreenivasan - HR Assistant/Candidate Experience Specialist seeking remote work after layoff from People Science. Site serves dual purpose: showcase HR/People Operations experience + South Indian culinary catering business (biryani specialty, 50-100+ guests). Domain: ashasreen.com. Contact: asreeniv3@gmail.com",
       "added_at": "2026-01-15T14:15:00.000000",
       "source": "consolidated"
     },
     {
       "type": "tech_stack",
-      "content": "Next.js 14+ App Router, TypeScript, Tailwind CSS, Vercel hosting. Uses @phosphor-icons/react for all icons (duotone weight). Dark mode via CSS custom properties + localStorage (useState pattern, NOT useSyncExternalStore). Google Fonts: Playfair Display (headings) + Inter (body).",
+      "content": "Next.js 14+ App Router, TypeScript, Tailwind CSS, Vercel hosting. @phosphor-icons/react (duotone weight) - NEVER React Icons or Lucide. Dark mode via useState + useEffect (NOT useSyncExternalStore). Google Fonts: Playfair Display (headings) + Inter (body).",
       "added_at": "2026-01-15T14:15:00.000000",
       "source": "consolidated"
     },
     {
       "type": "design_preferences",
-      "content": "Primary color: coral #f26959 (NOT gold). Warm & professional aesthetic. Mobile-first responsive design. Dark mode with toggle in header - DEFAULTS TO LIGHT MODE on first visit. NEVER use emojis - always use Phosphor icons with duotone weight instead. Never use React Icons or Lucide icons.",
-      "added_at": "2026-01-15T14:15:00.000000",
+      "content": "Primary color: coral #f26959 (NOT gold). Warm & professional aesthetic. Mobile-first. Dark mode defaults to LIGHT on first visit. Dark mode uses darker blacks: #0D0D0D (backgrounds), #1A1A1A (cards), #2D2D2D (borders). NEVER use emojis - use Phosphor icons instead.",
+      "added_at": "2026-01-15T16:00:00.000000",
       "source": "consolidated"
     },
     {
       "type": "content_strategy",
-      "content": "Humble, professional job-seeking tone throughout. Emphasize care, organization, follow-through. HR content focuses on candidate experience, coordination, people operations. Culinary content emphasizes traditional South Indian cuisine prepared with intention and attention to detail. Headshot image: /images/headshot-coral.jpeg",
-      "added_at": "2026-01-15T14:15:00.000000",
+      "content": "Confident, professional tone (not just job-seeking). Emphasize expertise in HR coordination, ATS management, stakeholder communication. Culinary: accomplished caterer with 1M+ views, 50-100+ guest events. Resume: /public/resumes/asha-sreenivasan-resume-jan-2026.pdf. Headshot: /images/headshot-coral.jpeg",
+      "added_at": "2026-01-21T17:00:00.000000",
       "source": "consolidated"
     },
     {
       "type": "social_media",
-      "content": "YouTube: @ashasculinaryworld (~4,500 subscribers, 1M+ total views). Instagram: @ashasculinaryworld (~1,000 followers). LinkedIn: https://www.linkedin.com/in/asha-sreenivasan-1a810114b/. Testimonials component on culinary page displays social media comments with platform icons.",
+      "content": "YouTube: @ashasculinaryworld (~4,500 subscribers, 1M+ views). Instagram: @ashasculinaryworld (~1,000 followers). LinkedIn: linkedin.com/in/asha-sreenivasan-1a810114b/. Testimonials carousel on culinary page with platform icons.",
       "added_at": "2026-01-15T14:15:00.000000",
       "source": "consolidated"
     },
     {
       "type": "completed_features",
-      "content": "Comprehensive code cleanup completed: All inline SVGs replaced with Phosphor icons (duotone weight), constants extracted to module-level, TypeScript interfaces added, nested ternaries eliminated, helper functions for conditional styling. Dark mode toggle fully functional: defaults to light mode, uses useState + useEffect (NOT useSyncExternalStore), removed system preference media query for manual control. Contact form with inquiry type selector (job/catering/general). Testimonials carousel with auto-rotation. CoreCompetencies and SpecialtiesSection components. TESTIMONIALS_GUIDE.md for social media testimonial collection. All code follows consistent patterns and Next.js 14+ best practices.",
-      "added_at": "2026-01-15T15:13:00.000000",
+      "content": "Full dark/light mode with toggle (syncs React state with DOM on mount). Contact form with inquiry type selector. Testimonials carousel with auto-rotation. CoreCompetencies and SpecialtiesSection components. All inline SVGs replaced with Phosphor icons. Constants extracted to module-level. TypeScript interfaces throughout. TESTIMONIALS_GUIDE.md for collecting social testimonials.",
+      "added_at": "2026-01-15T16:00:00.000000",
       "source": "consolidated"
     },
     {
       "type": "claude_response",
-      "content": "I see the background dev servers have stopped. The theme toggle fix has been successfully pushed to production! \n\nYour site should now be live on Vercel with:\n- ✅ Light mode as the default\n- ✅ Fully f",
-      "added_at": "2026-01-15T15:18:25.411527",
+      "content": "Memory consolidated: 10 → 6 entries. Removed partial messages/responses, updated design_preferences with dark mode hex values, and completed_features with the dark mode fix.",
+      "added_at": "2026-01-21T16:41:55.978381",
       "source": "realtime_capture"
     },
     {
       "type": "message",
-      "content": "light mode is partially working. the hero is correctly designed however the rest of the website is not. do a comprehensive analysis on what components/pages/elements/text/buttons/anything that has to ",
-      "added_at": "2026-01-15T15:18:25.411548",
+      "content": "i updated my moms resume, ensure that the ONLY resume shown/linked/used in ashasreen.com is /Users/anipotts/code/active/websites/ashasreen.com/resumes/asha-sreenivasan-resume-jan-2026.pdf and not any ",
+      "added_at": "2026-01-21T16:41:55.978413",
       "source": "realtime_capture"
     },
     {
       "type": "claude_response",
-      "content": "## ✅ Complete Dark/Light Mode Fix - Pushed to Production\n\nI've comprehensively fixed the dark/light mode across the entire website. Here's the complete summary:\n\n### ★ Insight ────────────────────────",
-      "added_at": "2026-01-15T15:38:19.495446",
+      "content": "All changes complete. Here's the summary of what was done and the content documentation:\n\n---\n\n## Changes Made\n\n1. **Resume link added** - Download button on Experience page pointing to `/resumes/asha",
+      "added_at": "2026-01-21T17:46:30.201532",
       "source": "realtime_capture"
     },
     {
       "type": "message",
-      "content": "Why is it that in light mode, the background and components are still in dark gray. I want to fix this. I want to update it so that in light mode, everything is light except for the text which should ",
-      "added_at": "2026-01-15T15:38:19.495470",
+      "content": "yes i want you to push all of these changes",
+      "added_at": "2026-01-21T17:46:30.201552",
       "source": "realtime_capture"
     }
   ],
   "created_at": "2026-01-15T11:44:35.621136",
-  "updated_at": "2026-01-15T15:38:19.495472"
+  "updated_at": "2026-01-21T17:46:30.201553"
 }

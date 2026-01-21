@@ -18,15 +18,14 @@ export default function Hero() {
               <span className="text-[var(--color-primary)]">Asha</span>
             </h1>
             <p className="text-lg md:text-xl text-[var(--color-neutral-dark)]/80 leading-relaxed mb-8">
-              I&apos;m an HR professional with a strong focus on candidate
-              experience, coordination, and people operations. I bring care,
-              organization, and follow-through to every role I support.
+              HR professional specializing in candidate experience, interview coordination, and people operations.
+              I build efficient systems that keep hiring processes running smoothly while ensuring every candidate
+              feels valued and informed.
             </p>
             <p className="text-lg md:text-xl text-[var(--color-neutral-dark)]/80 leading-relaxed mb-8">
-              I&apos;m currently seeking a remote, part-time or full-time
-              opportunity where I can help teams run smoothly and ensure
-              candidates and employees feel supported throughout every step of
-              the process.
+              Available for remote opportunities where I can apply my expertise in HR coordination,
+              ATS management, and stakeholder communication to help organizations
+              attract and retain top talent.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
